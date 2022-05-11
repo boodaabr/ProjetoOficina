@@ -1,0 +1,62 @@
+Tabelas, Atributos e Relacionamentos :
+
+Tabela Cliente:
+
+- A tabela cliente deve se comuniar com as tabelas CARRO e ENDEREÇO.
+
+Atributos:
+
+id_cliente ( Chave primaria ) 
+nome
+telefone 
+email
+cpf
+observacao / observacoes
+datacadastro
+
+
+Tabela Carro:
+
+- id_carro ( Chave primaria )
+- Placa
+- Ano
+- KM Atual
+- Tipo de Combustivel
+- Cadastro do Carro no sistema
+- Marca
+- Modelo
+- Cor do Veiculo
+- Chassi ( nao obrigatorio )
+- Renavan ( nao obrigatorio )
+- Observações Gerais 
+
+
+Tabela Endereco:
+
+- id_endereco
+- rua
+- numero
+- complemento
+- bairro
+- cep
+- ponto de referencia
+
+tabela agendamento:
+
+- id_agendamento
+- dataAgendamento
+- horaAgendamento
+- tipoAgendamento
+- tipoVeiculo
+- ObservacaoAgendamento
+- TelefoneContato
+
+Tabela Funcionario: 
+
+- id_funcionario
+- matricula
+- data_admissao
+- cargo
+- ctps
+- armario
+- tiposanguineo 
