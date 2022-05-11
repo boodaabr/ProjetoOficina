@@ -2,17 +2,17 @@ Tabelas, Atributos e Relacionamentos :
 
 Tabela Cliente:
 
-- A tabela cliente deve se comuniar com as tabelas CARRO e ENDERE�O.
+- A tabela cliente deve se comuniar com as tabelas CARRO e ENDEREÇO.
 
 Atributos:
 
-id_cliente ( Chave primaria ) 
-nome
-telefone 
-email
-cpf
-observacao / observacoes
-datacadastro
+- id_cliente ( Chave primaria ) 
+- nome
+- telefone 
+- email
+- cpf
+- observacao / observacoes
+- datacadastro
 
 
 Tabela Carro:
@@ -28,7 +28,7 @@ Tabela Carro:
 - Cor do Veiculo
 - Chassi ( nao obrigatorio )
 - Renavan ( nao obrigatorio )
-- Observa��es Gerais 
+- Observações Gerais 
 
 
 Tabela Endereco:
@@ -60,3 +60,29 @@ Tabela Funcionario:
 - ctps
 - armario
 - tiposanguineo 
+
+Tabela Produto:
+
+- id_produto
+- descricaoProduto
+- dataCadastroProduto
+- referencia 
+- Fabricante
+- Categoria ( Pneu, oleo , refrigeração, etc... )
+- quantidade
+- precoCusto
+- precoVenda
+- Garantia
+- codigodebarras
+
+Tabela Ordem de Servico:
+
+- id_orderservico
+- dataEntrada
+- dataSaida
+- Status ( Em andamento , finalizada , revisando , aguardando peça, faturada , orçamento , cancelada )
+- descricaoProblema
+- LaudoTecnico 
+- Observacoes
+- InserirFotos
+
