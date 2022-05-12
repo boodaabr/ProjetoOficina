@@ -61,6 +61,18 @@ Tabela Funcionario:
 - armario
 - tiposanguineo 
 
+
+Tabela Oficina:
+
+- id_oficina
+- dataEntrada
+- dataSaida
+- servicoRealizado
+- pecaTrocada
+- statusOficina ( em analise , Finalizada ) 
+- observacoesGerais
+
+
 Tabela Produto:
 
 - id_produto
@@ -69,6 +81,7 @@ Tabela Produto:
 - referencia 
 - Fabricante
 - Categoria ( Pneu, oleo , refrigeração, etc... )
+- montadora ( fiat, chevrolet , etc ..)
 - quantidade
 - precoCusto
 - precoVenda
