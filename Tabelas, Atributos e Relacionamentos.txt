@@ -120,3 +120,12 @@ Tabela Estoque:
 - precoUnitario
 - datacompraProduto
 
+Tabela CARGO
+
+- Cod. Cargo
+- Salário
+- Carga horária
+- Especialização
+- Função
+- Turno
+- ObsCargo
