@@ -129,3 +129,35 @@ Tabela CARGO
 - Função
 - Turno
 - ObsCargo
+
+Tabela lacamento: 
+
+- id_lancamento
+- total_vantagens => Soma dos eventos dos eventos positivos
+- total_desconto => imposto , irrf.
+- total_liquido 
+- valor
+- parcelaIncial 
+- parcelaFinal
+
+
+Tabela Periodo: 
+
+- id_periodo
+- ano
+- mes 
+- folha => Mês atual , 13° , férias 
+- status => aberto , fechado 
+- QtdFuncionarios => Qtd funcionarios processados no mês
+- HoraFinal => A hora que o status mudou de aberto para fechado
+
+Tabela Eventos:
+
+- id_evento
+- nome 
+- descrição 
+- horadacriacao
+- tipo => Vantagem ou desconto
+- incide13
+- incideferias
+- incideOutros
