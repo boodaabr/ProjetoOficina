@@ -7,35 +7,33 @@ Tabela Cliente:
 Atributos:
 
 - id_cliente ( Chave primaria ) 
-- nome
+- nome_cliente
 - telefone 
 - email
-- cpf
-- observacao / observacoes
+- cpf_cliente
 - datacadastro
+- observacao_cliente
+
 
 
 Tabela Carro:
 
 - id_carro ( Chave primaria )
 - Placa
-- Ano
+- Ano_carro
 - KM Atual
 - Tipo de Combustivel
-- Cadastro do Carro no sistema
 - Marca
 - Modelo
 - Cor do Veiculo
-- Chassi ( nao obrigatorio )
-- Renavan ( nao obrigatorio )
-- Observações Gerais 
+- observacao_carro
 
 
 Tabela Endereco:
 
 - id_endereco
 - rua
-- numero
+- numero_endereco
 - complemento
 - bairro
 - cep
@@ -47,18 +45,18 @@ tabela agendamento:
 - dataAgendamento
 - horaAgendamento
 - tipoAgendamento
-- tipoVeiculo
+- tipoVeiculo ( Caso o cliente ligue e nao tenha cadastro no sistema ) 
 - ObservacaoAgendamento
 - TelefoneContato
 
 Tabela Funcionario: 
 
 - id_funcionario
+- nome_funcionario
+- cpf_funcionario
 - matricula
 - data_admissao
-- cargo
 - ctps
-- armario
 - tiposanguineo 
 
 
@@ -78,7 +76,6 @@ Tabela Produto:
 - id_produto
 - descricaoProduto
 - dataCadastroProduto
-- referencia 
 - Fabricante
 - Categoria ( Pneu, oleo , refrigeração, etc... )
 - montadora ( fiat, chevrolet , etc ..)
@@ -97,7 +94,6 @@ Tabela Ordem de Servico:
 - descricaoProblema
 - LaudoTecnico 
 - Observacoes
-- InserirFotos
 
 
 Tabela Fornecedor: 
@@ -106,7 +102,7 @@ Tabela Fornecedor:
 - CNPJ
 - RazaoSocial
 - Nome Fantasia
-- Telefone 
+- Telefone_fornecedor
 - DataCadastroFornecedor
 - email
 
@@ -144,7 +140,7 @@ Tabela lacamento:
 Tabela Periodo: 
 
 - id_periodo
-- ano
+- ano_periodo
 - mes 
 - folha => Mês atual , 13° , férias 
 - status => aberto , fechado 
@@ -154,10 +150,20 @@ Tabela Periodo:
 Tabela Eventos:
 
 - id_evento
-- nome 
+- nome
 - descrição 
 - horadacriacao
 - tipo => Vantagem ou desconto
 - incide13
 - incideferias
 - incideOutros
+
+Tabela Dependentes:
+
+-id_dependente
+- nome_dependente
+- idade_dependente
+- parentesco 
+- cpf_dependente 
+- naturalidade 
+- situacao_dependente ( Exemplo: Dependente sem limite de idade )
