@@ -1,0 +1,11 @@
+Sequencia para Inserts:
+
+Cliente > Endereço > carro
+
+Oficina > endereço 
+
+cargo > oficina > funcionario 
+
+funcionario > dependente
+
+Eventos > lançamento > periodo
