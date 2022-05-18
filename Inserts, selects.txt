@@ -5,7 +5,7 @@ insert into endereco ( id_cliente , rua , bairro , numero_endereco , complemento
 (( select c.id_cliente from cliente c where id_cliente = 1 ) , 'Rua sa e souza' , ' Boa Viagem ' , 128 , 'APT 201' , '51030-065' , ' Ao lado da drogasil ' ); 
 
 insert into carro (id_cliente , modelo , marca , ano_carro , placa , km_atual , tipo_combustivel , cor_carro , observacao_carro ) values 
-((select c.id_cliente from cliente c where id_cliente = 1 ) , 'Palio ELX' , 'Fiat', '2011' , 'KFH-8761' , 84000,'Flex' , 'Prata' , 'O carro est· apresentando arquecimento');
+((select c.id_cliente from cliente c where id_cliente = 1 ) , 'Palio ELX' , 'Fiat', '2011' , 'KFH-8761' , 84000,'Flex' , 'Prata' , 'O carro est√° apresentando aquecimento');
 
 
 select * from carro; 
