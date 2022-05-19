@@ -32,25 +32,12 @@ data_compraproduto date
 
 CREATE TABLE agendamento (
 id_agendamento serial PRIMARY KEY,
+tipo_agendamento varchar(30),
+telefone_contato varchar(25),
 tipo_veiculo varchar(30),
 data_agendamento date,
-tipo_agendamento varchar(30),
-hora_agendamento varchar(20),
-telefone_contato varchar(25),
-observacao_agendamento text
-);
-
-CREATE TABLE carro (
-id_carro serial PRIMARY KEY,
-id_cliente integer,
-modelo varchar(20),
-marca varchar(20),
-ano_carro integer,
-placa varchar(10),
-km_atual integer,
-tipo_combustivel varchar(20),
-cor_carro varchar(20),
-observacao_carro text
+observacao_agendamento text,
+hora_agendamento varchar(20)
 );
 
 CREATE TABLE cargo (
@@ -65,6 +52,7 @@ carga_horaria varchar(20)
 
 CREATE TABLE lancamento (
 id_lancamento serial PRIMARY KEY,
+id_funcionario integer,
 total_desconto numeric(9,2),
 total_vantagem numeric(9,2),
 total_liquido numeric(9,2),
@@ -86,19 +74,19 @@ incide_outros varchar(10)
 
 CREATE TABLE cliente (
 id_cliente serial PRIMARY KEY,
-nome_cliente varchar(150),
-cpf_cliente varchar(12),
-data_nascimento date,
 telefone varchar(15),
 email varchar(80),
-observacoes_cliente text
+observacoes_cliente text,
+nome_cliente varchar(150),
+cpf_cliente varchar(20),
+data_nascimento date
 );
 
-CREATE TABLE forncedor (
+CREATE TABLE fornecedor (
 id_fornecedor serial PRIMARY KEY,
 cnpj varchar(40),
-nome_fantasia text,
 razaosocial text,
+nome_fantasia text,
 telefone_fornecedor varchar(25),
 data_cadastrofornecedor date,
 email varchar(60)
@@ -106,7 +94,6 @@ email varchar(60)
 
 CREATE TABLE produto (
 id_produto serial PRIMARY KEY,
-descricao_produto text,
 fabricante varchar(50),
 preco_custo numeric(9,2),
 quantidade integer,
@@ -114,45 +101,61 @@ codigo_barras varchar(50),
 preco_venda numeric(9,2),
 montadora varchar(60),
 garantia integer,
+descricao_produto text,
 data_cadastro_produto date,
 categoria varchar(60)
 );
 
+CREATE TABLE carro (
+id_carro serial PRIMARY KEY,
+id_cliente integer,
+km_atual integer,
+tipo_combustivel varchar(20),
+marca varchar(20),
+cor_carro varchar(20),
+observacao_carro text,
+modelo varchar(20),
+placa varchar(10),
+ano_carro varchar(25),
+FOREIGN KEY(id_cliente) REFERENCES cliente (id_cliente)
+);
+
 CREATE TABLE funcionario (
 id_funcionario serial PRIMARY KEY,
-id_endereco integer,
 id_oficina integer,
 cod_cargo integer,
 nome_funcionario varchar(100),
-cpf_funcionario varchar(15),
 matricula integer,
 data_admissao date,
 ctps varchar(30),
 tipo_sanguineo varchar(20),
+cpf_funcionario varchar(20),
 FOREIGN KEY(cod_cargo) REFERENCES cargo (cod_cargo)
-);
-
-CREATE TABLE oficina (
-id_oficina serial PRIMARY KEY,
-id_endereco integer,
-data_entrada date,
-servico_realizado text,
-peca_trocada text,
-status_oficina varchar(40),
-data_saida date,
-obs_geraloficina text
 );
 
 CREATE TABLE endereco (
 id_endereco serial PRIMARY KEY,
+id_funcionario integer,
 id_cliente integer,
+id_oficina integer,
 rua text,
 bairro varchar(30),
 numero_endereco integer,
-complemento varchar(25),
-cep varchar(25),
 ponto_referencia text,
+cep varchar(25),
+complemento varchar(25),
+FOREIGN KEY(id_funcionario) REFERENCES funcionario (id_funcionario),
 FOREIGN KEY(id_cliente) REFERENCES cliente (id_cliente)
+);
+
+CREATE TABLE oficina (
+id_oficina serial PRIMARY KEY,
+telefone varchar(50),
+email_oficina varchar(150),
+cnpj varchar(40),
+nome_oficina varchar(100),
+horario_abertura varchar(30),
+horario_encerramento varchar(20)
 );
 
 CREATE TABLE vai (
@@ -183,13 +186,6 @@ FOREIGN KEY(id_periodo) REFERENCES periodo (id_periodo),
 FOREIGN KEY(id_lancamento) REFERENCES lancamento (id_lancamento)
 );
 
-CREATE TABLE recebe (
-id_funcionario integer,
-id_lancamento integer,
-FOREIGN KEY(id_funcionario) REFERENCES funcionario (id_funcionario),
-FOREIGN KEY(id_lancamento) REFERENCES lancamento (id_lancamento)
-);
-
 CREATE TABLE consta (
 id_lancamento integer,
 id_evento integer,
@@ -209,17 +205,16 @@ id_ordemservico serial,
 id_cliente integer,
 id_funcionario integer,
 id_produto integer,
-data_entradaOS date,
-descricao_problema text,
-data_saidaOS date,
 status varchar(25),
-laudro_tecnico text,
+descricao_problema text,
+laudo_tecnico text,
 observacao_os text,
+data_entrada_os date,
+data_saida_os date,
 PRIMARY KEY(id_ordemservico,id_cliente,id_funcionario,id_produto)
 );
 
 ALTER TABLE dependentes ADD FOREIGN KEY(id_funcionario) REFERENCES funcionario (id_funcionario);
-ALTER TABLE carro ADD FOREIGN KEY(id_cliente) REFERENCES cliente (id_cliente);
-ALTER TABLE funcionario ADD FOREIGN KEY(id_endereco) REFERENCES endereco (id_endereco);
+ALTER TABLE lancamento ADD FOREIGN KEY(id_funcionario) REFERENCES funcionario (id_funcionario);
 ALTER TABLE funcionario ADD FOREIGN KEY(id_oficina) REFERENCES oficina (id_oficina);
-ALTER TABLE oficina ADD FOREIGN KEY(id_endereco) REFERENCES endereco (id_endereco);
+ALTER TABLE endereco ADD FOREIGN KEY(id_oficina) REFERENCES oficina (id_oficina);
