@@ -17,7 +17,7 @@ parentesco  varchar(50) not null,
 idade_depentente  integer not null,
 naturalidade varchar(20),
 situacao_dependente text
-)
+);
 
 CREATE TABLE estoque (
 id_estoque serial PRIMARY KEY,
@@ -96,7 +96,7 @@ cor_carro varchar(20),
 km_atual integer,
 tipo_combustivel varchar(20),
 observacao_carro text
-)
+);
 
 CREATE TABLE funcionario (
 id_funcionario serial PRIMARY KEY,
