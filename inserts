@@ -91,4 +91,4 @@ insert into endereco (id_cliente, rua , bairro, numero_endereco, complemento, ce
 ((select c.id_cliente from cliente c where id_cliente = 14) , 'Barao De Souza Leao', 'Boa Viagem',  658 , 'Apt 301', '51250-021', 'Perto do Mercado Trevo'); 
 
 insert into endereco (id_cliente, rua , bairro, numero_endereco, complemento, cep, ponto_referencia ) VALUES
-((select c.id_cliente from cliente c where id_cliente = 15) , 'Av Agamenom Magalhaes', 'Santo Amaro',  902 , 'Apt 902', '51250-010', 'Perto do clube Portugues); 
+((select c.id_cliente from cliente c where id_cliente = 15) , 'Av Agamenom Magalhaes', 'Santo Amaro',  902 , 'Apt 902', '51250-010', 'Perto do clube Portugues'); 
