@@ -23,6 +23,7 @@ insert into cliente (cpf_cliente, nome_cliente, telefone_cliente, data_nasciment
 insert into cliente (cpf_cliente, nome_cliente, telefone_cliente, data_nascimentocliente, email_cliente, observacoes_cliente ) VALUES
 					('815.667.760-90', 'Paulo Jose' , '81 94147-9987', '1972-10-20', 'paulo@gmail.com', 'Nada consta');
 
+
 insert into cliente (cpf_cliente, nome_cliente, telefone_cliente, data_nascimentocliente, email_cliente, observacoes_cliente ) VALUES
 					('246.558.710-24', 'Wilson Souza' , '81 96558-6714', '1988-08-20', 'wilson@gmail.com', 'Nada consta');                    
                     
@@ -31,6 +32,7 @@ insert into cliente (cpf_cliente, nome_cliente, telefone_cliente, data_nasciment
                     
 insert into cliente (cpf_cliente, nome_cliente, telefone_cliente, data_nascimentocliente, email_cliente, observacoes_cliente ) VALUES
 					('439.078.510-99', 'Antonia da Silva' , '81 9888-1144', '1945-08-20', 'antonia@gmail.com', 'Nada consta');                                 
+
 
 insert into cliente (cpf_cliente, nome_cliente, telefone_cliente, data_nascimentocliente, email_cliente, observacoes_cliente ) VALUES
 					('045.621.770-39', 'Vanessa da Silva' , '81 9555-4414', '1983-02-20', 'Vanessa@gmail.com', 'Nada consta');
@@ -43,3 +45,42 @@ insert into cliente (cpf_cliente, nome_cliente, telefone_cliente, data_nasciment
                     
 insert into cliente (cpf_cliente, nome_cliente, telefone_cliente, data_nascimentocliente, email_cliente, observacoes_cliente ) VALUES
 					('319.179.830-77', 'Carlos Henrique' , '81 91141-5474' ,'1975-10-20', 'carlos@gmail.com', 'Nada consta');
+                    
+--------------------------------------------------------------------------------------------------------------------------------------------------------------      
+
+insert into endereco (id_cliente, rua , bairro, numero_endereco, complemento, cep, ponto_referencia ) VALUES
+((select c.id_cliente from cliente c where id_cliente = 1) , 'Rua sa e souza', 'Boa Viagem',  128 , 'Apt 201', '51030-065', 'Ao lado da farmacia Drogasil'); 
+
+insert into endereco (id_cliente, rua , bairro, numero_endereco, complemento, cep, ponto_referencia ) VALUES
+((select c.id_cliente from cliente c where id_cliente = 2) , 'Conselheiro aguiar', 'Boa Viagem',  23 , 'casa', '51030-014', 'Perto do mercado Extra'); 
+
+insert into endereco (id_cliente, rua , bairro, numero_endereco, complemento, cep, ponto_referencia ) VALUES
+((select c.id_cliente from cliente c where id_cliente = 3) , 'Domingos Ferreira', 'Boa Viagem',  325 , 'Apt 802', '51020-321', 'Perto da galeria boa viagem'); 
+
+insert into endereco (id_cliente, rua , bairro, numero_endereco, complemento, cep, ponto_referencia ) VALUES
+((select c.id_cliente from cliente c where id_cliente = 4) , 'Barao de Souza Leao', 'Boa Viagem',  205 , 'Apt 301', '51030-041', 'Perto da sorveteria Chiquinho'); 
+
+insert into endereco (id_cliente, rua , bairro, numero_endereco, complemento, cep, ponto_referencia ) VALUES
+((select c.id_cliente from cliente c where id_cliente = 5) , 'Av Boa Viagem', 'Boa Viagem',  503 , 'Apt 1502', '51030-021', 'Em frente ao quiosque 13'); 
+
+insert into endereco (id_cliente, rua , bairro, numero_endereco, complemento, cep, ponto_referencia ) VALUES
+((select c.id_cliente from cliente c where id_cliente = 6) , 'Rua Setubal', 'Boa Viagem',  306 , 'Apt 802', '52014-021', 'Perto da Padaria Panduca'); 
+
+insert into endereco (id_cliente, rua , bairro, numero_endereco, complemento, cep, ponto_referencia ) VALUES
+((select c.id_cliente from cliente c where id_cliente = 7) , 'Rua Visconde Jequitionha', 'Boa Viagem',  289 , 'Apt 601', '52014-032', 'Perto do posto shell'); 
+
+insert into endereco (id_cliente, rua , bairro, numero_endereco, complemento, cep, ponto_referencia ) VALUES
+((select c.id_cliente from cliente c where id_cliente = 8) , 'Av Conde da Boa Vista', 'Centro',  502 , 'Apt 102', '52321-032', 'Perto do shop boa vista'); 
+
+insert into endereco (id_cliente, rua , bairro, numero_endereco, complemento, cep, ponto_referencia ) VALUES
+((select c.id_cliente from cliente c where id_cliente = 9) , 'Av Boa Viagem', 'Boa Viagem',  216 , 'Apt 901', '51201-032', 'Perto do Hotel Boa Viagem'); 
+
+insert into endereco (id_cliente, rua , bairro, numero_endereco, complemento, cep, ponto_referencia ) VALUES
+((select c.id_cliente from cliente c where id_cliente = 10) , 'Av Conselheiro Aguiar', 'Boa Viagem',  623 , 'Apt 701', '510210-032', 'Ao lado das Lojas Americanas'); 
+ 
+ insert into endereco (id_cliente, rua , bairro, numero_endereco, complemento, cep, ponto_referencia ) VALUES
+((select c.id_cliente from cliente c where id_cliente = 11) , 'Av Domingos Ferreira', 'Boa Viagem',  815 , 'Apt 502', '510210-035', 'Em frente ao Clinical Center'); 
+
+ insert into endereco (id_cliente, rua , bairro, numero_endereco, complemento, cep, ponto_referencia ) VALUES
+((select c.id_cliente from cliente c where id_cliente = 12) , 'Av Domingos Ferreira', 'Boa Viagem',  815 , 'Apt 502', '510210-035', 'Em frente ao Clinical Center'); 
+
