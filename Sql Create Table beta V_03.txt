@@ -1,3 +1,4 @@
+
 CREATE TABLE periodo (
 id_periodo serial PRIMARY KEY,
 ano_periodo date,
@@ -10,11 +11,11 @@ hora_final varchar(25)
 
 CREATE TABLE dependentes (
 id_dependente serial PRIMARY KEY,
-id_funcionario integer,
-nome_dependente varchar(150) not null,
+id_funcionario INTEGER,
+nome_dependente varchar(150) NOT NULL,
+parentesco  varchar(50) NOT NULL,
+idade_depentente  integer NOT NULL,
 cpf_dependente varchar(20),
-parentesco  varchar(50) not null,
-idade_depentente  integer not null,
 naturalidade varchar(20),
 situacao_dependente text
 );
@@ -31,27 +32,27 @@ data_compraproduto date
 
 CREATE TABLE agendamento (
 id_agendamento serial PRIMARY KEY,
-tipo_veiculo varchar(30) not null,
-tipo_agendamento varchar(30),
-data_agendamento date not null,
-hora_agendamento varchar(20) not null,
-telefone_contato varchar(25) not null,
+tipo_agendamento varchar(30) NOT NULL,
+data_agendamento date NOT NULL,
+hora_agendamento varchar(20) NOT NULL,
+telefone_contato varchar(25) NOT NULL,
+tipo_veiculo varchar(30),
 observacao_agendamento text
 );
 
 CREATE TABLE cargo (
 cod_cargo integer PRIMARY KEY,
-Salario numeric(9,2) not null,
+Salario numeric(9,2) NOT NULL,
 especializacao varchar(100),
-funcao varchar(100) not null,
-turno varchar(50) not null,
+funcao varchar(100) NOT NULL,
+turno varchar(50) NOT NULL,
 obs_cargo text,
-carga_horaria varchar(20) not null
+carga_horaria varchar(20)
 );
 
 CREATE TABLE lancamento (
 id_lancamento serial PRIMARY KEY,
-id_funcionario integer,
+id_funcionario INTEGER,
 total_desconto numeric(9,2),
 total_vantagem numeric(9,2),
 total_liquido numeric(9,2),
@@ -62,10 +63,10 @@ parcela_final integer
 
 CREATE TABLE eventos (
 id_evento serial PRIMARY KEY,
-nome varchar(50),
+nome_evento varchar(50),
 descricao text,
 horadacriacao varchar(30),
-tipo varchar(15),
+tipo_evento varchar(15),
 incide_13 varchar(10),
 incide_ferias varchar(10),
 incide_outros varchar(10)
@@ -74,140 +75,141 @@ incide_outros varchar(10)
 CREATE TABLE produto (
 id_produto serial PRIMARY KEY,
 codigo_barras varchar(50),
-descricao_produto text not null,
-fabricante varchar(50) not null,
-montadora varchar(60) not null,
+descricao_produto text NOT NULL,
+fabricante varchar(50) NOT NULL,
+quantidade integer,
 preco_custo numeric(9,2),
 preco_venda numeric(9,2),
-data_cadastro_produto date,
-quantidade integer,
+montadora varchar(60) NOT NULL,
 garantia integer,
+data_cadastro_produto date,
 categoria varchar(60)
 );
 
 CREATE TABLE carro (
 id_carro serial PRIMARY KEY,
-id_cliente integer,
-modelo varchar(20) not null,
-marca varchar(20) not null,
-placa varchar(10) not null,
+id_cliente INTEGER NOT NULL,
+marca varchar(20) NOT NULL,
+modelo varchar(20) NOT NULL,
+cor_carro varchar(20) NOT NULL,
 ano_carro varchar(25),
-cor_carro varchar(20),
-km_atual integer,
+placa varchar(10),
+km_atual varchar(100),
 tipo_combustivel varchar(20),
 observacao_carro text
 );
 
 CREATE TABLE funcionario (
 id_funcionario serial PRIMARY KEY,
-id_oficina integer,
+id_oficina INTEGER,
 cod_cargo integer,
-nome_funcionario varchar(100) not null,
-cpf_funcionario varchar(20) not null,
-matricula integer not null,
-data_admissao date not null,
-ctps varchar(30) not null,
+nome_funcionario varchar(100) NOT NULL,
+matricula integer NOT NULL,
+cpf_funcionario varchar(20) NOT NULL,
+data_nascimento_func date,
+ctps varchar(30) NOT NULL,
+data_admissao date NOT NULL,
 tipo_sanguineo varchar(20),
 FOREIGN KEY(cod_cargo) REFERENCES cargo (cod_cargo)
 );
 
 CREATE TABLE endereco (
 id_endereco serial PRIMARY KEY,
-id_funcionario integer,
-id_cliente integer,
-id_oficina integer,
-rua text not null,
-bairro varchar(30) not null,
-numero_endereco integer not null,
-complemento varchar(25) not null,
-cep varchar(25) not null,
+id_cliente INTEGER,
+id_funcionario INTEGER,
+id_oficina INTEGER,
+rua text,
+bairro varchar(30) NOT NULL,
+numero_endereco integer NOT NULL,
+complemento varchar(25) NOT NULL,
+cep varchar(25) NOT NULL,
 ponto_referencia text,
 FOREIGN KEY(id_funcionario) REFERENCES funcionario (id_funcionario)
 );
 
 CREATE TABLE oficina (
 id_oficina serial PRIMARY KEY,
-nome_oficina varchar(100) not null,
+nome_oficina varchar(100),
 horario_abertura varchar(30),
 email_oficina varchar(150),
 horario_encerramento varchar(20),
-telefone varchar(50),
-cnpj varchar(40) not null
+telefone_oficina varchar(50),
+cnpj varchar(40)
 );
 
 CREATE TABLE cliente (
 id_cliente serial PRIMARY KEY,
-cpf_cliente varchar(20) not null,
-nome_cliente varchar(150) not null,
-data_nascimento date,
-telefone varchar(15),
-email varchar(80),
+cpf_cliente varchar(20) NOT NULL,
+nome_cliente varchar(150) NOT NULL,
+telefone_cliente varchar(15),
+data_nascimentocliente date NOT NULL,
+email_cliente varchar(80),
 observacoes_cliente text
 );
 
 CREATE TABLE fornecedor (
 id_fornecedor serial PRIMARY KEY,
-cnpj varchar(40) not null,
+cnpj varchar(40) NOT NULL,
 razao_social text,
 nome_fantasia text,
-telefone_fornecedor varchar(25) not null,
+telefone_fornecedor varchar(25) NOT NULL,
 data_cadastrofornecedor date,
-email varchar(60) not null
+email_fornecedor varchar(60)
 );
 
 CREATE TABLE vai (
-id_produto integer,
-id_estoque integer,
+id_produto INTEGER,
+id_estoque INTEGER,
 FOREIGN KEY(id_produto) REFERENCES produto (id_produto),
 FOREIGN KEY(id_estoque) REFERENCES estoque (id_estoque)
 );
 
 CREATE TABLE tem_1 (
-id_fornecedor integer,
-id_endereco integer,
+id_fornecedor INTEGER,
+id_endereco INTEGER,
 FOREIGN KEY(id_fornecedor) REFERENCES fornecedor (id_fornecedor),
 FOREIGN KEY(id_endereco) REFERENCES endereco (id_endereco)
 );
 
 CREATE TABLE envia (
-id_produto integer,
-id_fornecedor integer,
+id_produto INTEGER,
+id_fornecedor INTEGER,
 FOREIGN KEY(id_produto) REFERENCES produto (id_produto),
 FOREIGN KEY(id_fornecedor) REFERENCES fornecedor (id_fornecedor)
 );
 
 CREATE TABLE por (
-id_periodo integer,
-id_lancamento integer,
+id_periodo INTEGER,
+id_lancamento INTEGER,
 FOREIGN KEY(id_periodo) REFERENCES periodo (id_periodo),
 FOREIGN KEY(id_lancamento) REFERENCES lancamento (id_lancamento)
 );
 
 CREATE TABLE consta (
-id_lancamento integer,
-id_evento integer,
+id_lancamento INTEGER,
+id_evento INTEGER,
 FOREIGN KEY(id_lancamento) REFERENCES lancamento (id_lancamento),
 FOREIGN KEY(id_evento) REFERENCES eventos (id_evento)
 );
 
 CREATE TABLE realiza (
-id_carro integer,
-id_agendamento integer,
+id_carro INTEGER,
+id_agendamento INTEGER,
 FOREIGN KEY(id_carro) REFERENCES carro (id_carro),
 FOREIGN KEY(id_agendamento) REFERENCES agendamento (id_agendamento)
 );
 
 CREATE TABLE ordemservico (
 id_ordemservico serial,
-id_cliente integer,
-id_funcionario integer,
-id_produto integer,
-status varchar(25),
+id_cliente INTEGER,
+id_funcionario INTEGER,
+id_produto INTEGER,
 descricao_problema text,
-observacao_os text,
-data_entrada_os date not null,
-data_saida_os date,
 laudo_tecnico text,
+observacao_os text,
+data_entrada_os date NOT NULL,
+data_saida_os date,
+status varchar(25),
 PRIMARY KEY(id_ordemservico,id_cliente,id_funcionario,id_produto)
 );
 
