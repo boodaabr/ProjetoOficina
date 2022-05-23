@@ -92,3 +92,54 @@ insert into endereco (id_cliente, rua , bairro, numero_endereco, complemento, ce
 
 insert into endereco (id_cliente, rua , bairro, numero_endereco, complemento, cep, ponto_referencia ) VALUES
 ((select c.id_cliente from cliente c where id_cliente = 15) , 'Av Agamenom Magalhaes', 'Santo Amaro',  902 , 'Apt 902', '51250-010', 'Perto do clube Portugues'); 
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+insert into carro ( id_cliente , marca, modelo, cor_carro, ano_carro, placa, km_atual, tipo_combustivel , observacao_carro ) values 
+((select c.id_cliente from cliente c where id_cliente = 1) , 'Fiat' , 'Uno', 'Prata' , '20/21', 'KKH-8747', '12111 KM', 'Flex' , 'Carro Apresenta Avarias na Porta do motorista'); 
+
+insert into carro ( id_cliente , marca, modelo, cor_carro, ano_carro, placa, km_atual, tipo_combustivel , observacao_carro ) values 
+((select c.id_cliente from cliente c where id_cliente = 2) , 'Fiat' , 'Palio ELX', 'Prata' , '18/19', 'KKZ-1245', '80000 KM', 'Flex' , 'Nada Consta');
+
+insert into carro ( id_cliente , marca, modelo, cor_carro, ano_carro, placa, km_atual, tipo_combustivel , observacao_carro ) values 
+((select c.id_cliente from cliente c where id_cliente = 3) , 'VW' , 'GOL Trend', 'Preto' , '14/15', 'KKZ-3251', '125000 KM', 'Flex' , 'Arranhoes, Amassados'); 
+
+insert into carro ( id_cliente , marca, modelo, cor_carro, ano_carro, placa, km_atual, tipo_combustivel , observacao_carro ) values 
+((select c.id_cliente from cliente c where id_cliente = 4) , 'BMW' , '325I', 'Branca' , '19/19', 'JHD-0204', '52000 KM', 'Flex' , 'Nada Consta'); 
+
+insert into carro ( id_cliente , marca, modelo, cor_carro, ano_carro, placa, km_atual, tipo_combustivel , observacao_carro ) values 
+((select c.id_cliente from cliente c where id_cliente = 5) , 'Fiat' , 'Mobi', 'Branca' , '20/20', 'OOP-5204', '35000 KM', 'Flex' , 'Nada Consta'); 
+
+insert into carro ( id_cliente , marca, modelo, cor_carro, ano_carro, placa, km_atual, tipo_combustivel , observacao_carro ) values 
+((select c.id_cliente from cliente c where id_cliente = 6) , 'Fiat' , 'Cronos', 'Vinho' , '20/20', 'KIZ-9965', '35000 KM', 'Flex' , 'Nada Consta'); 
+
+insert into carro ( id_cliente , marca, modelo, cor_carro, ano_carro, placa, km_atual, tipo_combustivel , observacao_carro ) values 
+((select c.id_cliente from cliente c where id_cliente = 7) , 'Peugeot' , '306', 'Preto' , '20/20', 'KOO-3431', '48000 KM', 'Flex' , 'Batida na Lateral Dianteira'); 
+
+insert into carro ( id_cliente , marca, modelo, cor_carro, ano_carro, placa, km_atual, tipo_combustivel , observacao_carro ) values 
+((select c.id_cliente from cliente c where id_cliente = 8) , 'Peugeot' , '208', 'Vermelho' , '20/20', 'PZZ-1325', '68000 KM', 'Flex' , 'Nada Consta'); 
+
+insert into carro ( id_cliente , marca, modelo, cor_carro, ano_carro, placa, km_atual, tipo_combustivel , observacao_carro ) values 
+((select c.id_cliente from cliente c where id_cliente = 9) , 'Hyundai' , 'HB20', 'Branco' , '21/21', 'KKI-2541', '45000 KM', 'Flex' , 'Nada Consta'); 
+
+insert into carro ( id_cliente , marca, modelo, cor_carro, ano_carro, placa, km_atual, tipo_combustivel , observacao_carro ) values 
+((select c.id_cliente from cliente c where id_cliente = 10) , 'Hyundai' , 'I30', 'Prata' , '16/16', 'KKI-4587', '150000 KM', 'Gasolina' , 'Nada Consta'); 
+
+insert into carro ( id_cliente , marca, modelo, cor_carro, ano_carro, placa, km_atual, tipo_combustivel , observacao_carro ) values 
+((select c.id_cliente from cliente c where id_cliente = 11) , 'Hyundai' , 'IX35', 'Prata' , '18/18', 'LLO-4587', '165000 KM', 'Flex' , 'Nada Consta'); 
+
+insert into carro ( id_cliente , marca, modelo, cor_carro, ano_carro, placa, km_atual, tipo_combustivel , observacao_carro ) values 
+((select c.id_cliente from cliente c where id_cliente = 12) , 'JEEP' , 'Renegade', 'Preto' , '18/18', 'UIU-8781', '59871 KM', 'Diesel' , 'Nada Consta'); 
+
+insert into carro ( id_cliente , marca, modelo, cor_carro, ano_carro, placa, km_atual, tipo_combustivel , observacao_carro ) values 
+((select c.id_cliente from cliente c where id_cliente = 13) , 'Honda' , 'Civic', 'Branco' , '20/20', 'KKK-8761', '89500 KM', 'Flex' , 'Nada Consta'); 
+
+insert into carro ( id_cliente , marca, modelo, cor_carro, ano_carro, placa, km_atual, tipo_combustivel , observacao_carro ) values 
+((select c.id_cliente from cliente c where id_cliente = 14) , 'Honda' , 'Fit', 'Prata' , '20/20', 'AUI-9911', '63210 KM', 'Flex' , 'Batida no Porta Mala'); 
+
+insert into carro ( id_cliente , marca, modelo, cor_carro, ano_carro, placa, km_atual, tipo_combustivel , observacao_carro ) values 
+((select c.id_cliente from cliente c where id_cliente = 15) , 'Toyota' , 'Corolla', 'Prata' , '21/21', 'HGD-0055', '49214 KM', 'Flex' , 'Nada Consta'); 
+
+
+
+
