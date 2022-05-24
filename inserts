@@ -140,6 +140,27 @@ insert into carro ( id_cliente , marca, modelo, cor_carro, ano_carro, placa, km_
 insert into carro ( id_cliente , marca, modelo, cor_carro, ano_carro, placa, km_atual, tipo_combustivel , observacao_carro ) values 
 ((select c.id_cliente from cliente c where id_cliente = 15) , 'Toyota' , 'Corolla', 'Prata' , '21/21', 'HGD-0055', '49214 KM', 'Flex' , 'Nada Consta'); 
 
+----------------------------------------------------------------------------------------------------------------------------------------------------------
 
+insert into cargo (cod_cargo, salario, especializacao , funcao , turno, obs_cargo, carga_horaria ) VALUES
+				  (147 , 2500.00 , 'Tecnico de Mecanica' , 'Mecanico Nivel 1' , 'Diurno', 'Iniciante' , '8 horas' );
+                  
+insert into cargo (cod_cargo, salario, especializacao , funcao , turno, obs_cargo, carga_horaria ) VALUES
+				  (148 , 4500.00, 'Graduado Mecanica' , 'Mecanico Nivel 2' , 'Diurno', 'Experiente' , '8 horas' );     
+           
+insert into cargo (cod_cargo, salario, especializacao , funcao , turno, obs_cargo, carga_horaria ) VALUES
+				  (149 , 6500.00 , 'Graduado Mecanica' , 'Mecanico Chefe' , 'Diurno', 'Experiente' , '8 horas' );    
+                  
+insert into cargo (cod_cargo, salario, especializacao , funcao , turno, obs_cargo, carga_horaria ) VALUES
+				  (150 , 3500.00 , 'Graduado Administracao' , 'Administrativo' , 'Diurno', 'Intermediario' , '8 horas' ); 
+
+insert into cargo (cod_cargo, salario, especializacao , funcao , turno, obs_cargo, carga_horaria ) VALUES
+				  (151 , 5500.00 , 'Graduado Administracao' , 'Chefe Administrativo' , 'Diurno', 'Experiente' , '8 horas' ); 
+                  
+insert into cargo (cod_cargo, salario, especializacao , funcao , turno, obs_cargo, carga_horaria ) VALUES
+				  (152 , 2000.00 , 'Nada Consta' , 'Auxiliar Servico Gerais' , 'Diurno', 'Iniciante' , '8 horas' ); 
+                  
+insert into cargo (cod_cargo, salario, especializacao , funcao , turno, obs_cargo, carga_horaria ) VALUES
+				  (153 , 8500.00 , 'Graduado Administracao' , 'Gerente Geral' , 'Diurno', 'Experiente' , '8 horas' ); 
 
 
