@@ -167,3 +167,12 @@ insert into cargo (cod_cargo, salario, especializacao , funcao , turno, obs_carg
 
 insert into oficina (nome_oficina , horario_abertura , email_oficina , horario_encerramento , telefone_oficina, cnpj ) VALUES
 ('Oficina AutoParts' , '09:00 Horas', 'autoparts@gmail.com', '18:00 Horas' , '81 3321-1455 ou 81 99568-5414', '11214.1211/2001.10'); 
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+insert into funcionario (id_oficina, cod_cargo, nome_funcionario, matricula, cpf_funcionario, data_nascimento_func, ctps, data_admissao , tipo_sanguineo) VALUES
+((select o.id_oficina from oficina o where id_oficina = 1) , 147 , 'Tião' , 001 , '050.414.214-45' , '1985-04-25', '1512.214.114' , '2022-05-24' , 'ab+');
+
+insert into funcionario (id_oficina, cod_cargo, nome_funcionario, matricula, cpf_funcionario, data_nascimento_func, ctps, data_admissao , tipo_sanguineo) VALUES
+((select o.id_oficina from oficina o where id_oficina = 1) , 147 , 'Marcio' , 002 , '050.414.200-20' , '1990-04-25', '6655.214.841' , '2022-05-24' , 'o+');
