@@ -143,24 +143,27 @@ insert into carro ( id_cliente , marca, modelo, cor_carro, ano_carro, placa, km_
 ----------------------------------------------------------------------------------------------------------------------------------------------------------
 
 insert into cargo (cod_cargo, salario, especializacao , funcao , turno, obs_cargo, carga_horaria ) VALUES
-				  (147 , 2500.00 , 'Tecnico de Mecanica' , 'Mecanico Nivel 1' , 'Diurno', 'Iniciante' , '8 horas' );
+147 , 2500.00 , 'Tecnico de Mecanica' , 'Mecanico Nivel 1' , 'Diurno', 'Iniciante' , '8 horas' );
                   
 insert into cargo (cod_cargo, salario, especializacao , funcao , turno, obs_cargo, carga_horaria ) VALUES
-				  (148 , 4500.00, 'Graduado Mecanica' , 'Mecanico Nivel 2' , 'Diurno', 'Experiente' , '8 horas' );     
+(148 , 4500.00, 'Graduado Mecanica' , 'Mecanico Nivel 2' , 'Diurno', 'Experiente' , '8 horas' );     
            
 insert into cargo (cod_cargo, salario, especializacao , funcao , turno, obs_cargo, carga_horaria ) VALUES
-				  (149 , 6500.00 , 'Graduado Mecanica' , 'Mecanico Chefe' , 'Diurno', 'Experiente' , '8 horas' );    
+(149 , 6500.00 , 'Graduado Mecanica' , 'Mecanico Chefe' , 'Diurno', 'Experiente' , '8 horas' );    
                   
 insert into cargo (cod_cargo, salario, especializacao , funcao , turno, obs_cargo, carga_horaria ) VALUES
-				  (150 , 3500.00 , 'Graduado Administracao' , 'Administrativo' , 'Diurno', 'Intermediario' , '8 horas' ); 
+(150 , 3500.00 , 'Graduado Administracao' , 'Administrativo' , 'Diurno', 'Intermediario' , '8 horas' ); 
 
 insert into cargo (cod_cargo, salario, especializacao , funcao , turno, obs_cargo, carga_horaria ) VALUES
-				  (151 , 5500.00 , 'Graduado Administracao' , 'Chefe Administrativo' , 'Diurno', 'Experiente' , '8 horas' ); 
+(151 , 5500.00 , 'Graduado Administracao' , 'Chefe Administrativo' , 'Diurno', 'Experiente' , '8 horas' ); 
                   
 insert into cargo (cod_cargo, salario, especializacao , funcao , turno, obs_cargo, carga_horaria ) VALUES
-				  (152 , 2000.00 , 'Nada Consta' , 'Auxiliar Servico Gerais' , 'Diurno', 'Iniciante' , '8 horas' ); 
+(152 , 2000.00 , 'Nada Consta' , 'Auxiliar Servico Gerais' , 'Diurno', 'Iniciante' , '8 horas' ); 
                   
 insert into cargo (cod_cargo, salario, especializacao , funcao , turno, obs_cargo, carga_horaria ) VALUES
-				  (153 , 8500.00 , 'Graduado Administracao' , 'Gerente Geral' , 'Diurno', 'Experiente' , '8 horas' ); 
+(153 , 8500.00 , 'Graduado Administracao' , 'Gerente Geral' , 'Diurno', 'Experiente' , '8 horas' ); 
 
+------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+insert into oficina (nome_oficina , horario_abertura , email_oficina , horario_encerramento , telefone_oficina, cnpj ) VALUES
+('Oficina AutoParts' , '09:00 Horas', 'autoparts@gmail.com', '18:00 Horas' , '81 3321-1455 ou 81 99568-5414', '11214.1211/2001.10'); 
