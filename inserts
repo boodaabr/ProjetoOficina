@@ -165,6 +165,33 @@ insert into cargo (cod_cargo, salario, especializacao , funcao , turno, obs_carg
 insert into oficina (nome_oficina , horario_abertura , email_oficina , horario_encerramento , telefone_oficina, cnpj ) VALUES
 ('Oficina AutoParts' , '09:00 Horas', 'autoparts@gmail.com', '18:00 Horas' , '81 3321-1455 ou 81 99568-5414', '11214.1211/2001.10'); 
 
+insert into oficina (nome_oficina , horario_abertura , email_oficina , horario_encerramento , telefone_oficina, cnpj ) VALUES
+('CarAuto' , '09:00 Horas', 'carauto@gmail.com', '18:00 Horas' , '81 3857-9987 ou 81 96554-8010', '222.011.21452/2001.01'); 
+
+insert into oficina (nome_oficina , horario_abertura , email_oficina , horario_encerramento , telefone_oficina, cnpj ) VALUES
+('Oficina do Galego' , '09:00 Horas', 'galego@gmail.com', '18:00 Horas' , '81 3654-4414 ou 81 96632-0100', '333.011.21452/251.12'); 
+
+insert into oficina (nome_oficina , horario_abertura , email_oficina , horario_encerramento , telefone_oficina, cnpj ) VALUES
+('Taurino Car' , '09:00 Horas', 'taurino@gmail.com', '17:00 Horas' , '81 3114-9987 ou 81 96658-0809', '444.011.21452/253.21'); 
+
+insert into oficina (nome_oficina , horario_abertura , email_oficina , horario_encerramento , telefone_oficina, cnpj ) VALUES
+('Carro Velho' , '09:00 Horas', 'carrovelho@gmail.com', '17:30 Horas' , '81 3225-9888 ou 81 98866-3366', '444.011.21452/254.03'); 
+
+insert into oficina (nome_oficina , horario_abertura , email_oficina , horario_encerramento , telefone_oficina, cnpj ) VALUES
+('Oficina do Tião' , '09:00 Horas', 'tiao@gmail.com', '18:30 Horas' , '81 3558-9988 ou 81 96669-5588', '11214.12112/221.02'); 
+
+insert into oficina (nome_oficina , horario_abertura , email_oficina , horario_encerramento , telefone_oficina, cnpj ) VALUES
+('Casa do Carro' , '09:00 Horas', 'casacarro@gmail.com', '18:00 Horas' , '81 3998-3311 ou 81 97748-8744', '222.011.21452/3333.05'); 
+
+insert into oficina (nome_oficina , horario_abertura , email_oficina , horario_encerramento , telefone_oficina, cnpj ) VALUES
+('Car Service' , '09:00 Horas', 'carservice@gmail.com', '18:00 Horas' , '81 3444-9966 ou 81 98898-2222', '333.011.21452/333.58'); 
+
+insert into oficina (nome_oficina , horario_abertura , email_oficina , horario_encerramento , telefone_oficina, cnpj ) VALUES
+('Oficina do Adriano' , '09:00 Horas', 'oficinaadriano@gmail.com', '17:00 Horas' , '81 3558-2211 ou 81 96663-3366', '444.011.21452/999.87'); 
+
+insert into oficina (nome_oficina , horario_abertura , email_oficina , horario_encerramento , telefone_oficina, cnpj ) VALUES
+('Marcos Auto' , '09:00 Horas', 'marcosauto@gmail.com', '17:30 Horas' , '81 3888-9888 ou 81 97777-3366', '444.011.21452/654.22');
+
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 
