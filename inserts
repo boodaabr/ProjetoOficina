@@ -232,18 +232,9 @@ insert into funcionario (id_oficina, cod_cargo, nome_funcionario, matricula, cpf
 ((select o.id_oficina from oficina o where id_oficina = 1) , 154 , 'Paulo' , 9 , '316.464.390-07' , '1998-06-08', '9975.333.987' , '2022-05-24' , 'ab-');
 
 insert into funcionario (id_oficina, cod_cargo, nome_funcionario, matricula, cpf_funcionario, data_nascimento_func, ctps, data_admissao , tipo_sanguineo) VALUES
-((select o.id_oficina from oficina o where id_oficina = 1) , 155 , 'Paulo' , 9 , '135.237.440-40' , '1986-05-20', '8874.444.332' , '2022-05-24' , 'ab-');
+((select o.id_oficina from oficina o where id_oficina = 1) , 155 , 'Maria' , 9 , '135.237.440-40' , '1986-05-20', '8874.444.332' , '2022-05-24' , 'ab-');
 
 insert into funcionario (id_oficina, cod_cargo, nome_funcionario, matricula, cpf_funcionario, data_nascimento_func, ctps, data_admissao , tipo_sanguineo) VALUES
 ((select o.id_oficina from oficina o where id_oficina = 1) , 156 , 'Patrick' , 10 , '131.568.260-57' , '1999-05-10', '4415.666.887' , '2022-05-24' , 'ab-');
 
-
----------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-
-
-
-
-
-
-
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
