@@ -205,7 +205,45 @@ insert into oficina (nome_oficina , horario_abertura , email_oficina , horario_e
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 
 insert into funcionario (id_oficina, cod_cargo, nome_funcionario, matricula, cpf_funcionario, data_nascimento_func, ctps, data_admissao , tipo_sanguineo) VALUES
-((select o.id_oficina from oficina o where id_oficina = 1) , 147 , 'Tião' , 001 , '050.414.214-45' , '1985-04-25', '1512.214.114' , '2022-05-24' , 'ab+');
+((select o.id_oficina from oficina o where id_oficina = 1) , 147 , 'Tião' , 1 , '050.414.214-45' , '1985-04-25', '1512.214.114' , '2022-05-24' , 'ab+');
 
 insert into funcionario (id_oficina, cod_cargo, nome_funcionario, matricula, cpf_funcionario, data_nascimento_func, ctps, data_admissao , tipo_sanguineo) VALUES
-((select o.id_oficina from oficina o where id_oficina = 1) , 147 , 'Marcio' , 002 , '050.414.200-20' , '1990-04-25', '6655.214.841' , '2022-05-24' , 'o+');
+((select o.id_oficina from oficina o where id_oficina = 1) , 147 , 'Marcio' , 2 , '050.414.200-20' , '1990-04-25', '6655.214.841' , '2022-05-24' , 'o+');
+
+insert into funcionario (id_oficina, cod_cargo, nome_funcionario, matricula, cpf_funcionario, data_nascimento_func, ctps, data_admissao , tipo_sanguineo) VALUES
+((select o.id_oficina from oficina o where id_oficina = 1) , 148 , 'Jefferson' , 3 , '547.414.965-80' , '1980-08-10', '7774.4414.888' , '2022-05-25' , 'a-');
+
+insert into funcionario (id_oficina, cod_cargo, nome_funcionario, matricula, cpf_funcionario, data_nascimento_func, ctps, data_admissao , tipo_sanguineo) VALUES
+((select o.id_oficina from oficina o where id_oficina = 1) , 149 , 'Marcelo' , 4 , '124.685.820-710' , '1975-09-04', '7777.987.371' , '2022-05-24' , 'ab+');
+
+insert into funcionario (id_oficina, cod_cargo, nome_funcionario, matricula, cpf_funcionario, data_nascimento_func, ctps, data_admissao , tipo_sanguineo) VALUES
+((select o.id_oficina from oficina o where id_oficina = 1) , 150 , 'Adriano' , 5 , '251.954.660-33' , '1980-11-01', '9754.679.846' , '2022-05-24' , 'ab+');
+
+insert into funcionario (id_oficina, cod_cargo, nome_funcionario, matricula, cpf_funcionario, data_nascimento_func, ctps, data_admissao , tipo_sanguineo) VALUES
+((select o.id_oficina from oficina o where id_oficina = 1) , 151 , 'Arnaldo' , 6 , '668.623.960-72' , '1970-01-28', '8854.741.963' , '2022-05-24' , 'O-');
+
+insert into funcionario (id_oficina, cod_cargo, nome_funcionario, matricula, cpf_funcionario, data_nascimento_func, ctps, data_admissao , tipo_sanguineo) VALUES
+((select o.id_oficina from oficina o where id_oficina = 1) , 152 , 'Zeca' , 7 , '859.863.050-00' , '1978-06-22', '6647.331.666' , '2022-05-24' , 'a-');
+
+insert into funcionario (id_oficina, cod_cargo, nome_funcionario, matricula, cpf_funcionario, data_nascimento_func, ctps, data_admissao , tipo_sanguineo) VALUES
+((select o.id_oficina from oficina o where id_oficina = 1) , 153 , 'Otavio' , 8 , '998.489.370-72' , '1977-06-22', '2228.111.846' , '2022-05-24' , 'ab-');
+
+insert into funcionario (id_oficina, cod_cargo, nome_funcionario, matricula, cpf_funcionario, data_nascimento_func, ctps, data_admissao , tipo_sanguineo) VALUES
+((select o.id_oficina from oficina o where id_oficina = 1) , 154 , 'Paulo' , 9 , '316.464.390-07' , '1998-06-08', '9975.333.987' , '2022-05-24' , 'ab-');
+
+insert into funcionario (id_oficina, cod_cargo, nome_funcionario, matricula, cpf_funcionario, data_nascimento_func, ctps, data_admissao , tipo_sanguineo) VALUES
+((select o.id_oficina from oficina o where id_oficina = 1) , 155 , 'Paulo' , 9 , '135.237.440-40' , '1986-05-20', '8874.444.332' , '2022-05-24' , 'ab-');
+
+insert into funcionario (id_oficina, cod_cargo, nome_funcionario, matricula, cpf_funcionario, data_nascimento_func, ctps, data_admissao , tipo_sanguineo) VALUES
+((select o.id_oficina from oficina o where id_oficina = 1) , 156 , 'Patrick' , 10 , '131.568.260-57' , '1999-05-10', '4415.666.887' , '2022-05-24' , 'ab-');
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
