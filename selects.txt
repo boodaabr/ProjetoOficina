@@ -20,3 +20,8 @@ INNER JOIN endereco on cliente.id_cliente = endereco.id_cliente;
 update cliente
 set telefone = '(81) 99568-0514'
 where id_cliente = 1; 
+
+
+select func.nome_funcionario , carg.salario 
+from funcionario func
+inner join cargo carg on carg.cod_cargo = func.cod_cargo ;
