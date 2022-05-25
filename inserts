@@ -140,7 +140,7 @@ insert into carro ( id_cliente , marca, modelo, cor_carro, ano_carro, placa, km_
 ----------------------------------------------------------------------------------------------------------------------------------------------------------
 
 insert into cargo (cod_cargo, salario, especializacao , funcao , turno, obs_cargo, carga_horaria ) VALUES
-147 , 2500.00 , 'Tecnico de Mecanica' , 'Mecanico Nivel 1' , 'Diurno', 'Iniciante' , '8 horas' );
+(147 , 2500.00 , 'Tecnico de Mecanica' , 'Mecanico Nivel 1' , 'Diurno', 'Iniciante' , '8 horas' );
                   
 insert into cargo (cod_cargo, salario, especializacao , funcao , turno, obs_cargo, carga_horaria ) VALUES
 (148 , 4500.00, 'Graduado Mecanica' , 'Mecanico Nivel 2' , 'Diurno', 'Experiente' , '8 horas' );     
@@ -159,6 +159,15 @@ insert into cargo (cod_cargo, salario, especializacao , funcao , turno, obs_carg
                   
 insert into cargo (cod_cargo, salario, especializacao , funcao , turno, obs_cargo, carga_horaria ) VALUES
 (153 , 8500.00 , 'Graduado Administracao' , 'Gerente Geral' , 'Diurno', 'Experiente' , '8 horas' ); 
+
+insert into cargo (cod_cargo, salario, especializacao , funcao , turno, obs_cargo, carga_horaria ) VALUES
+(154 , 3000.00 , 'Graduado Administracao' , 'Almoxarifado' , 'Diurno', 'Intermediario' , '8 horas' ); 
+
+insert into cargo (cod_cargo, salario, especializacao , funcao , turno, obs_cargo, carga_horaria ) VALUES
+(155 , 5500.00 , 'Graduado Contabeis' , 'Departamento Financeiro' , 'Diurno', 'Experiente' , '8 horas' ); 
+
+insert into cargo (cod_cargo, salario, especializacao , funcao , turno, obs_cargo, carga_horaria ) VALUES
+(156 , 4000.00 , 'Tecnico em Segurança' , 'Vigilante' , 'Noturno', 'Intermediario' , '12 horas' ); 
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------
 
