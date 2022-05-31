@@ -79,7 +79,7 @@ insert into endereco (id_cliente, rua , bairro, numero_endereco, complemento, ce
 ((select c.id_cliente from cliente c where id_cliente = 11) , 'Av Domingos Ferreira', 'Boa Viagem',  815 , 'Apt 502', '510210-035', 'Em frente ao Clinical Center'); 
 
  insert into endereco (id_cliente, rua , bairro, numero_endereco, complemento, cep, ponto_referencia ) VALUES
-((select c.id_cliente from cliente c where id_cliente = 12) , 'Av Domingos Ferreira', 'Boa Viagem',  815 , 'Apt 502', '510210-035', 'Em frente ao Clinical Center'); 
+((select c.id_cliente from cliente c where id_cliente = 12)89 , 'Av Domingos Ferreira', 'Boa Viagem',  815 , 'Apt 502', '510210-035', 'Em frente ao Clinical Center'); 
 
 insert into endereco (id_cliente, rua , bairro, numero_endereco, complemento, cep, ponto_referencia ) VALUES
 ((select c.id_cliente from cliente c where id_cliente = 13) , 'Av Caxanga', 'Iputinga',  298 , 'Apt 401', '510210-021', 'Perto do parque de exposições'); 
@@ -89,6 +89,39 @@ insert into endereco (id_cliente, rua , bairro, numero_endereco, complemento, ce
 
 insert into endereco (id_cliente, rua , bairro, numero_endereco, complemento, cep, ponto_referencia ) VALUES
 ((select c.id_cliente from cliente c where id_cliente = 15) , 'Av Agamenom Magalhaes', 'Santo Amaro',  902 , 'Apt 902', '51250-010', 'Perto do clube Portugues'); 
+
+insert into endereco (id_funcionario, rua , bairro , numero_endereco , complemento , cep, ponto_referencia ) Values 
+((select func.id_funcionario from funcionario func where id_funcionario = 1) , 'Av Agamenom Magalhaes', 'Santo Amaro',  705 , 'Apt 601', '51250-050', 'Perto do clube Portugues');
+
+insert into endereco (id_funcionario, rua , bairro , numero_endereco , complemento , cep, ponto_referencia ) Values 
+((select func.id_funcionario from funcionario func where id_funcionario = 2) , 'Av Agamenom Magalhaes', 'Santo Amaro',  402 , 'Apt 201', '51250-080', 'Perto da restauração');
+
+insert into endereco (id_funcionario, rua , bairro , numero_endereco , complemento , cep, ponto_referencia ) Values 
+((select func.id_funcionario from funcionario func where id_funcionario = 3) , 'Domingos Ferreira', 'Boa Viagem',  321 , 'Apt 101', '51030-840', 'Perto Da frisabor');
+
+insert into endereco (id_funcionario, rua , bairro , numero_endereco , complemento , cep, ponto_referencia ) Values 
+((select func.id_funcionario from funcionario func where id_funcionario = 4) , 'Domingos Ferreira', 'Boa Viagem',  602 , 'Apt 503', '51024-074', 'Perto Do carrefour');
+
+insert into endereco (id_funcionario, rua , bairro , numero_endereco , complemento , cep, ponto_referencia ) Values 
+((select func.id_funcionario from funcionario func where id_funcionario = 5) , 'Av Caxanga', 'Iputinga',  321 , 'Apt 501', '56011-412' , 'Perto do Terminal da Upa');
+
+insert into endereco (id_funcionario, rua , bairro , numero_endereco , complemento , cep, ponto_referencia ) Values 
+((select func.id_funcionario from funcionario func where id_funcionario = 6) , 'Av Caxanga', 'Iputinga',  221 , 'Apt 104', '56011-272', 'Perto do bompreço');
+
+insert into endereco (id_funcionario, rua , bairro , numero_endereco , complemento , cep, ponto_referencia ) Values 
+((select func.id_funcionario from funcionario func where id_funcionario = 7) , 'Av Caxanga', 'Iputinga',  503 , 'Apt 203', '56011-221', 'Perto do bompreço');
+
+insert into endereco (id_funcionario, rua , bairro , numero_endereco , complemento , cep, ponto_referencia ) Values 
+((select func.id_funcionario from funcionario func where id_funcionario = 8) , 'Av Caxanga', 'Iputinga',  764 , 'Apt 402', '56011-233', 'Perto Do Golf Club');
+
+insert into endereco (id_funcionario, rua , bairro , numero_endereco , complemento , cep, ponto_referencia ) Values 
+((select func.id_funcionario from funcionario func where id_funcionario = 9) , 'Av Caxanga', 'Iputinga',  898 , 'Apt 702', '56011-666', 'Perto Do viaduto da BR');
+
+insert into endereco (id_funcionario, rua , bairro , numero_endereco , complemento , cep, ponto_referencia ) Values 
+((select func.id_funcionario from funcionario func where id_funcionario = 10) , 'Av Caxanga', 'Iputinga',  556 , 'Apt 302', '56011-512', 'Perto Do Galetus');
+
+insert into endereco (id_funcionario, rua , bairro , numero_endereco , complemento , cep, ponto_referencia ) Values 
+((select func.id_funcionario from funcionario func where id_funcionario = 11) , 'Av Caxanga', 'Iputinga',  890 , 'Apt 202', '56011-445', 'Na rua do getulio vargas');
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -236,6 +269,8 @@ insert into funcionario (id_oficina, cod_cargo, nome_funcionario, matricula, cpf
 
 insert into funcionario (id_oficina, cod_cargo, nome_funcionario, matricula, cpf_funcionario, data_nascimento_func, ctps, data_admissao , tipo_sanguineo) VALUES
 ((select o.id_oficina from oficina o where id_oficina = 1) , 156 , 'Patrick' , 10 , '131.568.260-57' , '1999-05-10', '4415.666.887' , '2022-05-24' , 'ab-');
+
+
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
