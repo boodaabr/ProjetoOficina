@@ -154,8 +154,6 @@ insert into endereco (id_oficina, rua , bairro , numero_endereco , complemento ,
 insert into endereco (id_oficina, rua , bairro , numero_endereco , complemento , cep, ponto_referencia ) Values 
 ((select ofc.id_oficina from oficina ofc where id_oficina = 10) , 'Rua Afogados', 'Afogados',  997 , 'Nº 243', '56036-543', 'Proximo ao mercado de afogados');
 
-
-
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 insert into carro ( id_cliente , marca, modelo, cor_carro, ano_carro, placa, km_atual, tipo_combustivel , observacao_carro ) values 
@@ -337,6 +335,37 @@ insert into dependentes (id_funcionario , nome_dependente, parentesco, idade_dep
 insert into dependentes (id_funcionario , nome_dependente, parentesco, idade_dependente, cpf_dependente, naturalidade, situacao_dependente ) VALUES
 ((select func.id_funcionario from funcionario func where id_funcionario = 10) , 'Fabricio Filho' , 'Filho(a)' , 9 , '029.996.500-78', 'Pernambucano' , 'Ativo' );
 
-
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+-- Aqui Vamos realizar a comunicação entra as tabelas Agendamento e Carro -- 
+insert into realiza ( id_agendamento , id_carro ) 
+( select ag.id_agendamento , ca.id_carro from agendamento ag join carro ca on ag.id_agendamento = ca.id_carro );
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+insert into agendamento (tipo_agendamento, data_agendamento , hora_agendamento, telefone_contato, tipo_veiculo, observacao_agendamento ) VALUES
+('Revisao' , '2022-05-30' , '15 Horas' , '81 99547-4414' , 'Sedã' , 'Verificar nivel do oleo e trocar o filtro'); 
+
+insert into agendamento (tipo_agendamento, data_agendamento , hora_agendamento, telefone_contato, tipo_veiculo, observacao_agendamento ) VALUES
+('Problema' , '2022-05-28' , '12 Horas' , '81 98875-4414' , 'Hatch' , 'Problema de Aquecimento, favor analisar'); 
+
+insert into agendamento (tipo_agendamento, data_agendamento , hora_agendamento, telefone_contato, tipo_veiculo, observacao_agendamento ) VALUES
+('Problema' , '2022-05-29' , '10 Horas' , '81 98875-8875' , 'Hatch' , 'Problema ao Ligar');
+
+insert into agendamento (tipo_agendamento, data_agendamento , hora_agendamento, telefone_contato, tipo_veiculo, observacao_agendamento ) VALUES
+('Suspensão' , '2022-05-29' , '11 Horas' , '81 98875-8888' , 'Sedã' , 'Barulho na Suspensão Dianteira Esquerda');
+
+insert into agendamento (tipo_agendamento, data_agendamento , hora_agendamento, telefone_contato, tipo_veiculo, observacao_agendamento ) VALUES
+('Ar Condicionado' , '2022-05-29' , '09 Horas' , '81 98875-6666' , 'Hatch' , 'Ar condicionado nao está gelando');
+
+insert into agendamento (tipo_agendamento, data_agendamento , hora_agendamento, telefone_contato, tipo_veiculo, observacao_agendamento ) VALUES
+('Direção' , '2022-05-29' , '15 Horas' , '81 93346-7796' , 'Sedã' , 'Direção está muito dura');
+
+insert into agendamento (tipo_agendamento, data_agendamento , hora_agendamento, telefone_contato, tipo_veiculo, observacao_agendamento ) VALUES
+('Revisao' , '2022-05-29' , '17 Horas' , '81 93346-8896' , 'Hatch' , 'Realizar a Revisão no carro');
+
+insert into agendamento (tipo_agendamento, data_agendamento , hora_agendamento, telefone_contato, tipo_veiculo, observacao_agendamento ) VALUES
+('Revisao' , '2022-05-29' , '17 Horas' , '81 93346-8896' , 'Hatch' , 'Realizar a Revisão no carro');
+
+
+ 
+ 
