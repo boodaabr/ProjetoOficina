@@ -239,34 +239,34 @@ insert into funcionario (id_oficina, cod_cargo, nome_funcionario, matricula, cpf
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-insert into dependentes (id_funcionario , nome_dependente, parentesco, idade_depentente, cpf_dependente, naturalidade, situacao_dependente ) VALUES
+insert into dependentes (id_funcionario , nome_dependente, parentesco, idade_dependente, cpf_dependente, naturalidade, situacao_dependente ) VALUES
 ((select func.id_funcionario from funcionario func where id_funcionario = 1) , 'Maria Joaquina' , 'Filho(a)' , 10 , '447.854.447-84', 'Pernambucana' , 'Ativo' );
 
-insert into dependentes (id_funcionario , nome_dependente, parentesco, idade_depentente, cpf_dependente, naturalidade, situacao_dependente ) VALUES
+insert into dependentes (id_funcionario , nome_dependente, parentesco, idade_dependente, cpf_dependente, naturalidade, situacao_dependente ) VALUES
 ((select func.id_funcionario from funcionario func where id_funcionario = 1) , 'Joao Victor' , 'Filho(a)' , 8 , '998.854.447-32', 'Pernambucano' , 'Ativo' );
 
-insert into dependentes (id_funcionario , nome_dependente, parentesco, idade_depentente, cpf_dependente, naturalidade, situacao_dependente ) VALUES
+insert into dependentes (id_funcionario , nome_dependente, parentesco, idade_dependente, cpf_dependente, naturalidade, situacao_dependente ) VALUES
 ((select func.id_funcionario from funcionario func where id_funcionario = 2) , 'Mauricio Cesar' , 'Filho(a)' , 5 , '321.854.333-95', 'Paulistano' , 'Ativo' );
 
-insert into dependentes (id_funcionario , nome_dependente, parentesco, idade_depentente, cpf_dependente, naturalidade, situacao_dependente ) VALUES
+insert into dependentes (id_funcionario , nome_dependente, parentesco, idade_dependente, cpf_dependente, naturalidade, situacao_dependente ) VALUES
 ((select func.id_funcionario from funcionario func where id_funcionario = 5) , 'Jose Augusto Filho' , 'Filho(a)' , 12 , '456.033.580-09', 'Pernambucano' , 'Ativo' );
 
-insert into dependentes (id_funcionario , nome_dependente, parentesco, idade_depentente, cpf_dependente, naturalidade, situacao_dependente ) VALUES
+insert into dependentes (id_funcionario , nome_dependente, parentesco, idade_dependente, cpf_dependente, naturalidade, situacao_dependente ) VALUES
 ((select func.id_funcionario from funcionario func where id_funcionario = 6) , 'Marcia Freire' , 'Filho(a)' , 8 , '655.905.710-06', 'Pernambucana' , 'Ativo' );
 
-insert into dependentes (id_funcionario , nome_dependente, parentesco, idade_depentente, cpf_dependente, naturalidade, situacao_dependente ) VALUES
+insert into dependentes (id_funcionario , nome_dependente, parentesco, idade_dependente, cpf_dependente, naturalidade, situacao_dependente ) VALUES
 ((select func.id_funcionario from funcionario func where id_funcionario = 6) , 'Bruno de Melo' , 'Filho(a)' , 11 , '228.529.470-05', 'Pernambucano' , 'Ativo' );
 
-insert into dependentes (id_funcionario , nome_dependente, parentesco, idade_depentente, cpf_dependente, naturalidade, situacao_dependente ) VALUES
+insert into dependentes (id_funcionario , nome_dependente, parentesco, idade_dependente, cpf_dependente, naturalidade, situacao_dependente ) VALUES
 ((select func.id_funcionario from funcionario func where id_funcionario = 8) , 'Bianca Maria' , 'Filho(a)' , 15 , '722.389.400-81', 'Pernambucano' , 'Ativo' );
 
-insert into dependentes (id_funcionario , nome_dependente, parentesco, idade_depentente, cpf_dependente, naturalidade, situacao_dependente ) VALUES
+insert into dependentes (id_funcionario , nome_dependente, parentesco, idade_dependente, cpf_dependente, naturalidade, situacao_dependente ) VALUES
 ((select func.id_funcionario from funcionario func where id_funcionario = 9) , 'Cintia Maria' , 'Filho(a)' , 13 , '108.378.880-93', 'Pernambucana' , 'Ativo' );
 
-insert into dependentes (id_funcionario , nome_dependente, parentesco, idade_depentente, cpf_dependente, naturalidade, situacao_dependente ) VALUES
+insert into dependentes (id_funcionario , nome_dependente, parentesco, idade_dependente, cpf_dependente, naturalidade, situacao_dependente ) VALUES
 ((select func.id_funcionario from funcionario func where id_funcionario = 9) , 'Sofia Maria' , 'Conjuge' , 41 , '437.094.410-48', 'Pernambucana' , 'Ativo' );
 
-insert into dependentes (id_funcionario , nome_dependente, parentesco, idade_depentente, cpf_dependente, naturalidade, situacao_dependente ) VALUES
+insert into dependentes (id_funcionario , nome_dependente, parentesco, idade_dependente, cpf_dependente, naturalidade, situacao_dependente ) VALUES
 ((select func.id_funcionario from funcionario func where id_funcionario = 10) , 'Fabricio Filho' , 'Filho(a)' , 9 , '029.996.500-78', 'Pernambucano' , 'Ativo' );
 
 
