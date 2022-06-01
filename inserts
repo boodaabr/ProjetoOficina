@@ -79,7 +79,7 @@ insert into endereco (id_cliente, rua , bairro, numero_endereco, complemento, ce
 ((select c.id_cliente from cliente c where id_cliente = 11) , 'Av Domingos Ferreira', 'Boa Viagem',  815 , 'Apt 502', '510210-035', 'Em frente ao Clinical Center'); 
 
  insert into endereco (id_cliente, rua , bairro, numero_endereco, complemento, cep, ponto_referencia ) VALUES
-((select c.id_cliente from cliente c where id_cliente = 12)89 , 'Av Domingos Ferreira', 'Boa Viagem',  815 , 'Apt 502', '510210-035', 'Em frente ao Clinical Center'); 
+((select c.id_cliente from cliente c where id_cliente = 12) , 'Av Domingos Ferreira', 'Boa Viagem',  815 , 'Apt 502', '510210-035', 'Em frente ao Clinical Center'); 
 
 insert into endereco (id_cliente, rua , bairro, numero_endereco, complemento, cep, ponto_referencia ) VALUES
 ((select c.id_cliente from cliente c where id_cliente = 13) , 'Av Caxanga', 'Iputinga',  298 , 'Apt 401', '510210-021', 'Perto do parque de exposições'); 
@@ -364,8 +364,24 @@ insert into agendamento (tipo_agendamento, data_agendamento , hora_agendamento, 
 ('Revisao' , '2022-05-29' , '17 Horas' , '81 93346-8896' , 'Hatch' , 'Realizar a Revisão no carro');
 
 insert into agendamento (tipo_agendamento, data_agendamento , hora_agendamento, telefone_contato, tipo_veiculo, observacao_agendamento ) VALUES
-('Revisao' , '2022-05-29' , '17 Horas' , '81 93346-8896' , 'Hatch' , 'Realizar a Revisão no carro');
+('Manutenção' , '2022-05-29' , '12 Horas' , '81 93346-9965' , 'Hatch' , 'Realizar a troca do sistema de arrefecimento');
 
+insert into agendamento (tipo_agendamento, data_agendamento , hora_agendamento, telefone_contato, tipo_veiculo, observacao_agendamento ) VALUES
+('Manutenção' , '2022-05-28' , '13 Horas' , '81 98547-4457' , 'Hatch' , 'Realizar o rodizio dos pneus');
 
- 
- 
+insert into agendamento (tipo_agendamento, data_agendamento , hora_agendamento, telefone_contato, tipo_veiculo, observacao_agendamento ) VALUES
+('Manutenção' , '2022-05-29' , '15 Horas' , '81 93346-8875' , 'SUV' , 'Realizar a limpeza dos bicos');
+
+insert into agendamento (tipo_agendamento, data_agendamento , hora_agendamento, telefone_contato, tipo_veiculo, observacao_agendamento ) VALUES
+('Manutenção' , '2022-05-29' , '16 Horas' , '81 93346-0098' , 'SUV' , 'Troca do oleo da caixa de cambio');
+
+insert into agendamento (tipo_agendamento, data_agendamento , hora_agendamento, telefone_contato, tipo_veiculo, observacao_agendamento ) VALUES
+('Revisão' , '2022-05-29' , '09 Horas' , '81 93346-0098' , 'Sedã' , 'Troca de oleo');
+
+insert into agendamento (tipo_agendamento, data_agendamento , hora_agendamento, telefone_contato, tipo_veiculo, observacao_agendamento ) VALUES
+('Manutenção' , '2022-05-29' , '09:30 Horas' , '81 93346-6555' , 'Hatch' , 'Problema nos vidros eletricos');
+
+insert into agendamento (tipo_agendamento, data_agendamento , hora_agendamento, telefone_contato, tipo_veiculo, observacao_agendamento ) VALUES
+('Revisão' , '2022-05-29' , '17 Horas' , '81 93346-1123' , 'Hatch' , 'Troca de oleo, motor e caixa de cambio');
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
