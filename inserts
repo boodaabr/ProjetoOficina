@@ -381,7 +381,10 @@ insert into agendamento (tipo_agendamento, data_agendamento , hora_agendamento, 
 insert into agendamento (tipo_agendamento, data_agendamento , hora_agendamento, telefone_contato, tipo_veiculo, observacao_agendamento ) VALUES
 ('Manutenção' , '2022-05-29' , '09:30 Horas' , '81 93346-6555' , 'Hatch' , 'Problema nos vidros eletricos');
 
-insert into agendamento (tipo_agendamento, data_agendamento , hora_agendamento, telefone_contato, tipo_veiculo, observacao_agendamento ) VALUES
-('Revisão' , '2022-05-29' , '17 Horas' , '81 93346-1123' , 'Hatch' , 'Troca de oleo, motor e caixa de cambio');
+insert into agendamento ( tipo_agendamento, data_agendamento , hora_agendamento, telefone_contato, tipo_veiculo, observacao_agendamento ) VALUES
+( 'Revisão' , '2022-05-27' , '08 Horas' , '81 93346-9987' , 'Sedã' , 'Verificar os ferios');
 
------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
