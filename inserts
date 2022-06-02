@@ -344,7 +344,7 @@ insert into realiza ( id_agendamento , id_carro )
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 insert into agendamento (tipo_agendamento, data_agendamento , hora_agendamento, telefone_contato, tipo_veiculo, observacao_agendamento ) VALUES
-('Revisao' , '2022-05-30' , '15 Horas' , '81 99547-4414' , 'Sedã' , 'Verificar nivel do oleo e trocar o filtro'); 
+('Revisao' , '2022-05-30' , '15 Horas' , '81 99547-4414' , 'Hatch' , 'Verificar nivel do oleo e trocar o filtro'); 
 
 insert into agendamento (tipo_agendamento, data_agendamento , hora_agendamento, telefone_contato, tipo_veiculo, observacao_agendamento ) VALUES
 ('Problema' , '2022-05-28' , '12 Horas' , '81 98875-4414' , 'Hatch' , 'Problema de Aquecimento, favor analisar'); 
@@ -371,7 +371,7 @@ insert into agendamento (tipo_agendamento, data_agendamento , hora_agendamento, 
 ('Manutenção' , '2022-05-28' , '13 Horas' , '81 98547-4457' , 'Hatch' , 'Realizar o rodizio dos pneus');
 
 insert into agendamento (tipo_agendamento, data_agendamento , hora_agendamento, telefone_contato, tipo_veiculo, observacao_agendamento ) VALUES
-('Manutenção' , '2022-05-29' , '15 Horas' , '81 93346-8875' , 'SUV' , 'Realizar a limpeza dos bicos');
+('Manutenção' , '2022-05-29' , '15 Horas' , '81 93346-8875' , 'Hatch' , 'Realizar a limpeza dos bicos');
 
 insert into agendamento (tipo_agendamento, data_agendamento , hora_agendamento, telefone_contato, tipo_veiculo, observacao_agendamento ) VALUES
 ('Manutenção' , '2022-05-29' , '16 Horas' , '81 93346-0098' , 'SUV' , 'Troca do oleo da caixa de cambio');
@@ -383,7 +383,10 @@ insert into agendamento (tipo_agendamento, data_agendamento , hora_agendamento, 
 ('Manutenção' , '2022-05-29' , '09:30 Horas' , '81 93346-6555' , 'Hatch' , 'Problema nos vidros eletricos');
 
 insert into agendamento ( tipo_agendamento, data_agendamento , hora_agendamento, telefone_contato, tipo_veiculo, observacao_agendamento ) VALUES
-( 'Revisão' , '2022-05-27' , '08 Horas' , '81 93346-9987' , 'Sedã' , 'Verificar os ferios');
+( 'Revisão' , '2022-05-27' , '08 Horas' , '81 93346-9987' , 'Hatch' , 'Verificar os ferios');
+
+insert into agendamento ( tipo_agendamento, data_agendamento , hora_agendamento, telefone_contato, tipo_veiculo, observacao_agendamento ) VALUES
+( 'Revisão' , '2022-05-22' , '15 Horas' , '81 93346-8895' , 'Sedã' , 'Trocar Filtro de combustivel e filtro de oleo');
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
