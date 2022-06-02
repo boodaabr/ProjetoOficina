@@ -390,5 +390,97 @@ insert into agendamento ( tipo_agendamento, data_agendamento , hora_agendamento,
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+insert into eventos ( nome_evento , descricao , horadacriacao ,tipo_evento, incide_13, incide_ferias, incide_outros ) values 
+('Salario' , 'Refere-se ao salario base no funcionario' , '13 Horas - Data: 01/06/22', 'Provento' , 'Sim', 'Sim', 'Não' ); 
+
+insert into eventos ( nome_evento , descricao , horadacriacao ,tipo_evento, incide_13, incide_ferias, incide_outros ) values 
+('Hora Adicional' , 'Refere-se a hora extra do funcionario' , '14 Horas - Data: 01/06/22' , 'Provento' , 'Sim', 'Não', 'Não' );
+
+insert into eventos ( nome_evento , descricao , horadacriacao ,tipo_evento, incide_13, incide_ferias, incide_outros ) values 
+('Salario' , 'Refere-se ao salario base no funcionario' , '13 Horas - Data: 01/06/22' , 'Provento','Sim', 'Sim', 'Não' ); 
+
+insert into eventos ( nome_evento , descricao , horadacriacao ,tipo_evento, incide_13, incide_ferias, incide_outros ) values 
+('INSS' , 'Refere-se ao desconto do INSS' , '14 Horas - Data: 01/06/22' , 'Desconto','Sim', 'Sim', 'Não' ); 
+
+insert into eventos ( nome_evento , descricao , horadacriacao ,tipo_evento, incide_13, incide_ferias, incide_outros ) values 
+('IRRF' , 'Refere-se ao desconto do IRRF' , '14 Horas - Data: 01/06/22' , 'Desconto','Sim', 'Sim', 'Não' ); 
+
+insert into eventos ( nome_evento , descricao , horadacriacao ,tipo_evento, incide_13, incide_ferias, incide_outros ) values 
+('Vale Transporte' , 'Refere-se ao vale transporte do funcionario' , '14 Horas - Data: 01/06/22' , 'Desconto','Sim', 'Sim', 'Não' ); 
+
+insert into eventos ( nome_evento , descricao , horadacriacao ,tipo_evento, incide_13, incide_ferias, incide_outros ) values 
+('Faltas' , 'Refere-se a Falta do funcionario' , '14 Horas - Data: 01/06/22' , 'Desconto','Sim', 'Sim', 'Não' ); 
+
+insert into eventos ( nome_evento , descricao , horadacriacao ,tipo_evento, incide_13, incide_ferias, incide_outros ) values 
+('1º Pacela 13º Salario' , 'Refere-se a primeira parcela do 13º salario' , '14 Horas - Data: 01/06/22' , 'Desconto','Não', 'Sim', 'Não' ); 
+
+insert into eventos ( nome_evento , descricao , horadacriacao ,tipo_evento, incide_13, incide_ferias, incide_outros ) values 
+('2º Pacela 13º Salario' , 'Refere-se a segunda parcela do 13º salario' , '14 Horas - Data: 01/06/22' , 'Desconto','Não', 'Sim', 'Não' ); 
+
+insert into eventos ( nome_evento , descricao , horadacriacao ,tipo_evento, incide_13, incide_ferias, incide_outros ) values 
+('Férias' , 'Refere-se as férias do funcionario' , '14 Horas - Data: 01/06/22' , 'Desconto','Sim', 'Sim', 'Não' ); 
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+insert into periodo ( ano_periodo , mes , folha , status , qtd_funcionario , hora_final ) VALUES
+('2021-01-31' , 'Janeiro' , 'Regular', 'Encerrada' , 10, '17:30');
+
+insert into periodo ( ano_periodo , mes , folha , status , qtd_funcionario , hora_final ) VALUES
+('2021-02-28' , 'Fevereiro' , 'Regular', 'Encerrada' , 10, '17:30');
+
+insert into periodo ( ano_periodo , mes , folha , status , qtd_funcionario , hora_final ) VALUES
+('2021-03-31' , 'Março' , 'Regular', 'Encerrada' , 10, '17:30');
+
+insert into periodo ( ano_periodo , mes , folha , status , qtd_funcionario , hora_final ) VALUES
+('2021-04-30' , 'Abril' , 'Regular', 'Encerrada' , 10, '17:30');
+
+insert into periodo ( ano_periodo , mes , folha , status , qtd_funcionario , hora_final ) VALUES
+('2021-05-31' , 'Maio' , 'Regular', 'Encerrada' , 10, '17:30');
+
+insert into periodo ( ano_periodo , mes , folha , status , qtd_funcionario , hora_final ) VALUES
+('2021-06-30' , 'Junho' , 'Regular', 'Encerrada' , 10, '17:30');
+
+insert into periodo ( ano_periodo , mes , folha , status , qtd_funcionario , hora_final ) VALUES
+('2021-06-30' , 'Junho' , '13º Adiantamento', 'Encerrada' , 10, '17:30');
+
+insert into periodo ( ano_periodo , mes , folha , status , qtd_funcionario , hora_final ) VALUES
+('2021-07-31' , 'Julho' , 'Regular', 'Encerrada' , 10, '17:30');
+
+insert into periodo ( ano_periodo , mes , folha , status , qtd_funcionario , hora_final ) VALUES
+('2021-08-31' , 'Agosto' , 'Regular', 'Encerrada' , 10, '17:30');
+
+insert into periodo ( ano_periodo , mes , folha , status , qtd_funcionario , hora_final ) VALUES
+('2021-09-30' , 'Setembro' , 'Regular', 'Encerrada' , 10, '17:30');
+
+insert into periodo ( ano_periodo , mes , folha , status , qtd_funcionario , hora_final ) VALUES
+('2021-10-31' , 'Outubro' , 'Regular', 'Encerrada' , 10, '17:30');
+
+insert into periodo ( ano_periodo , mes , folha , status , qtd_funcionario , hora_final ) VALUES
+('2021-11-30' , 'Novembro' , 'Regular', 'Encerrada' , 10, '17:30');
+
+insert into periodo ( ano_periodo , mes , folha , status , qtd_funcionario , hora_final ) VALUES
+('2021-12-31' , 'Dezembro' , 'Regular', 'Encerrada' , 10, '17:30');
+
+insert into periodo ( ano_periodo , mes , folha , status , qtd_funcionario , hora_final ) VALUES
+('2021-12-31' , 'Dezembro' , '13º Segunda Parcela', 'Encerrada' , 10, '17:30');
+
+insert into periodo ( ano_periodo , mes , folha , status , qtd_funcionario , hora_final ) VALUES
+('2022-01-31' , 'Janeiro' , 'Regular', 'Encerrada' , 10, '17:30');
+
+insert into periodo ( ano_periodo , mes , folha , status , qtd_funcionario , hora_final ) VALUES
+('2022-02-28' , 'Fevereiro' , 'Regular', 'Encerrada' , 10, '17:30');
+
+insert into periodo ( ano_periodo , mes , folha , status , qtd_funcionario , hora_final ) VALUES
+('2022-03-31' , 'Março' , 'Regular', 'Encerrada' , 10, '17:30');
+
+insert into periodo ( ano_periodo , mes , folha , status , qtd_funcionario , hora_final ) VALUES
+('2022-04-30' , 'Abril' , 'Regular', 'Encerrada' , 10, '17:30');
+
+insert into periodo ( ano_periodo , mes , folha , status , qtd_funcionario , hora_final ) VALUES
+('2021-05-31' , 'Maio' , 'Regular', 'Encerrada' , 10, '17:30');
+
+insert into periodo ( ano_periodo , mes , folha , status , qtd_funcionario ) VALUES
+('2022-06-30' , 'Junho' , 'Regular', 'Aberta' , 10);
+
 
 
