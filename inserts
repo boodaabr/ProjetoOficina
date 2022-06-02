@@ -481,3 +481,25 @@ insert into periodo ( ano_periodo , mes , folha , status , qtd_funcionario , hor
 
 insert into periodo ( ano_periodo , mes , folha , status , qtd_funcionario ) VALUES
 ('2022-06-30' , 'Junho' , 'Regular', 'Aberta' , 10);
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+insert into lancamento (id_funcionario , total_vantagem , total_desconto , total_liquido , valor , parcela_inicial , parcela_final ) VALUES
+((select func.id_funcionario from funcionario func where id_funcionario = 1) , '500.00' , '2.500' , '2.000', '0', '0','0');
+
+insert into lancamento (id_funcionario , total_vantagem , total_desconto , total_liquido , valor , parcela_inicial , parcela_final ) VALUES
+((select func.id_funcionario from funcionario func where id_funcionario = 2) , '500.00' , '2.500' , '2.000', '0', '0','0');
+
+
+
+
+
+select func.id_funcionario , func.nome_funcionario, cg.salario, cg.funcao
+from cargo cg
+inner join funcionario func on cg.cod_cargo = 147;
+
+
+select * from funcionario where cod_cargo = 147;
+
+
