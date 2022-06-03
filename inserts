@@ -337,9 +337,30 @@ insert into dependentes (id_funcionario , nome_dependente, parentesco, idade_dep
 ((select func.id_funcionario from funcionario func where id_funcionario = 10) , 'Fabricio Filho' , 'Filho(a)' , 9 , '029.996.500-78', 'Pernambucano' , 'Ativo' );
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
--- Aqui Vamos realizar a comunicação entra as tabelas Agendamento e Carro -- 
-insert into realiza ( id_agendamento , id_carro ) 
-( select ag.id_agendamento , ca.id_carro from agendamento ag join carro ca on ag.id_agendamento = ca.id_carro );
+-- Após ter o id_agendamento e o id_carro .. devidamente inserido nas tabelas... inserir na tabela realiza passando os codigos-- 
+
+insert into realiza (id_agendamento ,id_carro )
+(select ag.id_agendamento , ca.id_carro from agendamento ag 
+inner join carro ca on ag.id_agendamento = 1 and ca.id_carro = 2);
+
+insert into realiza (id_agendamento ,id_carro )
+(select ag.id_agendamento , ca.id_carro from agendamento ag 
+inner join carro ca on ag.id_agendamento = 2 where ca.id_carro = 5);
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+--Aqui abaixo selecionamos o resultados das tabelas agendamento e carro, passando seus respectivos ids.
+
+select ag.tipo_agendamento, ag.data_agendamento, ag.hora_agendamento, ag.telefone_contato, ag.tipo_veiculo, ag.observacao_agendamento, ca.id_cliente, ca.marca, ca.modelo, ca.placa 
+from agendamento ag
+inner join carro ca on ag.id_agendamento = 2 and ca.id_carro =  5;
+
+select ag.tipo_agendamento, ag.data_agendamento, ag.hora_agendamento, ag.telefone_contato, ag.tipo_veiculo, ag.observacao_agendamento, ca.id_cliente, ca.marca, ca.modelo, ca.placa 
+from agendamento ag
+inner join carro ca on ag.id_agendamento = 1 and ca.id_carro = 2;
+
+
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
