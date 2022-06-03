@@ -384,6 +384,8 @@ insert into agendamento ( tipo_agendamento, data_agendamento , hora_agendamento,
 insert into agendamento ( tipo_agendamento, data_agendamento , hora_agendamento, telefone_contato, tipo_veiculo, observacao_agendamento ) VALUES
 ( 'Revisão' , '2022-05-22' , '15 Horas' , '81 93346-8895' , 'Sedã' , 'Trocar Filtro de combustivel e filtro de oleo');
 
+select * from agendamento;
+
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- Após ter o id_agendamento e o id_carro .. devidamente inserido nas tabelas... inserir na tabela realiza passando os codigos-- 
 
@@ -396,19 +398,75 @@ insert into realiza (id_agendamento ,id_carro )
 (select ag.id_agendamento , ca.id_carro from agendamento ag 
 inner join carro ca on ag.id_agendamento = 2 where ca.id_carro = 5);
 
+insert into realiza (id_agendamento ,id_carro )
+(select ag.id_agendamento , ca.id_carro from agendamento ag 
+inner join carro ca on ag.id_agendamento = 3 where ca.id_carro = 3);
 
+insert into realiza (id_agendamento ,id_carro )
+(select ag.id_agendamento , ca.id_carro from agendamento ag 
+inner join carro ca on ag.id_agendamento = 4 where ca.id_carro = 6);
+
+insert into realiza (id_agendamento ,id_carro )
+(select ag.id_agendamento , ca.id_carro from agendamento ag 
+inner join carro ca on ag.id_agendamento = 5 where ca.id_carro = 7);
+
+insert into realiza (id_agendamento ,id_carro )
+(select ag.id_agendamento , ca.id_carro from agendamento ag 
+inner join carro ca on ag.id_agendamento = 6 where ca.id_carro = 13);
+
+insert into realiza (id_agendamento ,id_carro )
+(select ag.id_agendamento , ca.id_carro from agendamento ag 
+inner join carro ca on ag.id_agendamento = 7 where ca.id_carro = 8);
+
+insert into realiza (id_agendamento ,id_carro )
+(select ag.id_agendamento , ca.id_carro from agendamento ag 
+inner join carro ca on ag.id_agendamento = 8 where ca.id_carro = 1);
+
+insert into realiza (id_agendamento ,id_carro )
+(select ag.id_agendamento , ca.id_carro from agendamento ag 
+inner join carro ca on ag.id_agendamento = 9 where ca.id_carro = 9);
+
+insert into realiza (id_agendamento ,id_carro )
+(select ag.id_agendamento , ca.id_carro from agendamento ag 
+inner join carro ca on ag.id_agendamento = 10 where ca.id_carro = 10);
+
+insert into realiza (id_agendamento ,id_carro )
+(select ag.id_agendamento , ca.id_carro from agendamento ag 
+inner join carro ca on ag.id_agendamento = 11 where ca.id_carro = 12);
+
+insert into realiza (id_agendamento ,id_carro )
+(select ag.id_agendamento , ca.id_carro from agendamento ag 
+inner join carro ca on ag.id_agendamento = 12 where ca.id_carro = 15);
+
+insert into realiza (id_agendamento ,id_carro )
+(select ag.id_agendamento , ca.id_carro from agendamento ag 
+inner join carro ca on ag.id_agendamento = 13 where ca.id_carro = 14);
+
+insert into realiza (id_agendamento ,id_carro )
+(select ag.id_agendamento , ca.id_carro from agendamento ag 
+inner join carro ca on ag.id_agendamento = 14 where ca.id_carro = 4);
+
+insert into realiza (id_agendamento ,id_carro )
+(select ag.id_agendamento , ca.id_carro from agendamento ag 
+inner join carro ca on ag.id_agendamento = 15 where ca.id_carro = 11);
+
+select * from agendamento;
+
+select * from carro;
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 --Aqui abaixo selecionamos o resultados das tabelas agendamento e carro, passando seus respectivos ids.
 
 select ag.tipo_agendamento, ag.data_agendamento, ag.hora_agendamento, ag.telefone_contato, ag.tipo_veiculo, ag.observacao_agendamento, ca.id_cliente, ca.marca, ca.modelo, ca.placa 
 from agendamento ag
-inner join carro ca on ag.id_agendamento = 2 and ca.id_carro =  5;
+inner join carro ca on ag.id_agendamento = 1 and ca.id_carro = 2;
 
 select ag.tipo_agendamento, ag.data_agendamento, ag.hora_agendamento, ag.telefone_contato, ag.tipo_veiculo, ag.observacao_agendamento, ca.id_cliente, ca.marca, ca.modelo, ca.placa 
 from agendamento ag
-inner join carro ca on ag.id_agendamento = 1 and ca.id_carro = 2;
+inner join carro ca on ag.id_agendamento = 2 and ca.id_carro =  5;
 
+
+SELECT * from carro;
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------
 --Abaixo eu quero saber o resultado de todos os carros que tem agendamento
 
