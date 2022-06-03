@@ -409,6 +409,14 @@ select ag.tipo_agendamento, ag.data_agendamento, ag.hora_agendamento, ag.telefon
 from agendamento ag
 inner join carro ca on ag.id_agendamento = 1 and ca.id_carro = 2;
 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+--Abaixo eu quero saber o resultado de todos os carros que tem agendamento
+
+select ag.tipo_agendamento, ag.data_agendamento, ag.hora_agendamento, ag.telefone_contato, ag.tipo_veiculo, ag.observacao_agendamento ,ag.id_agendamento, rea.id_carro,  ca.marca, ca.modelo, ca.placa
+from agendamento ag
+inner join realiza rea on ag.id_agendamento = rea.id_agendamento
+inner join carro ca on ca.id_carro = rea.id_carro;
+
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
