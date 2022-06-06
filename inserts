@@ -612,20 +612,105 @@ insert into lancamento (id_funcionario, total_vantagem, total_desconto , total_l
 ((select func.id_funcionario from funcionario func where id_funcionario = 10) , '4000.00' , '600.00', '3400.00' ,'0', '0','0');
 
 
-
 select func.nome_funcionario, func.cpf_funcionario , func.ctps, lanc.id_lancamento, lanc.total_vantagem, lanc.total_desconto, lanc.total_liquido, lanc.valor, lanc.parcela_inicial, lanc.parcela_final
 from funcionario func 
 inner join lancamento lanc on lanc.id_funcionario = func.id_funcionario;
 
 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+insert into por (id_periodo , id_lancamento ) 
+(select per.id_periodo , lanc.id_lancamento from periodo per
+inner join lancamento lanc on per.id_periodo = 1 where lanc.id_lancamento = 1);
+
+insert into por (id_periodo , id_lancamento ) 
+(select per.id_periodo , lanc.id_lancamento from periodo per
+inner join lancamento lanc on per.id_periodo = 2 where lanc.id_lancamento = 2);
+
+insert into por (id_periodo , id_lancamento ) 
+(select per.id_periodo , lanc.id_lancamento from periodo per
+inner join lancamento lanc on per.id_periodo = 3 where lanc.id_lancamento = 3);
+
+insert into por (id_periodo , id_lancamento ) 
+(select per.id_periodo , lanc.id_lancamento from periodo per
+inner join lancamento lanc on per.id_periodo = 4 where lanc.id_lancamento = 4);
+
+insert into por (id_periodo , id_lancamento ) 
+(select per.id_periodo , lanc.id_lancamento from periodo per
+inner join lancamento lanc on per.id_periodo = 5 where lanc.id_lancamento = 5);
+
+insert into por (id_periodo , id_lancamento ) 
+(select per.id_periodo , lanc.id_lancamento from periodo per
+inner join lancamento lanc on per.id_periodo = 6 where lanc.id_lancamento = 6);
+
+insert into por (id_periodo , id_lancamento ) 
+(select per.id_periodo , lanc.id_lancamento from periodo per
+inner join lancamento lanc on per.id_periodo = 7 where lanc.id_lancamento = 6);
+
+insert into por (id_periodo , id_lancamento ) 
+(select per.id_periodo , lanc.id_lancamento from periodo per
+inner join lancamento lanc on per.id_periodo = 8 where lanc.id_lancamento = 7);
+
+insert into por (id_periodo , id_lancamento ) 
+(select per.id_periodo , lanc.id_lancamento from periodo per
+inner join lancamento lanc on per.id_periodo = 9 where lanc.id_lancamento = 8);
+
+insert into por (id_periodo , id_lancamento ) 
+(select per.id_periodo , lanc.id_lancamento from periodo per
+inner join lancamento lanc on per.id_periodo = 10 where lanc.id_lancamento = 9);
+
+insert into por (id_periodo , id_lancamento ) 
+(select per.id_periodo , lanc.id_lancamento from periodo per
+inner join lancamento lanc on per.id_periodo = 11 where lanc.id_lancamento = 10);
+
+insert into por (id_periodo , id_lancamento ) 
+(select per.id_periodo , lanc.id_lancamento from periodo per
+inner join lancamento lanc on per.id_periodo = 12 where lanc.id_lancamento = 11);
+
+insert into por (id_periodo , id_lancamento ) 
+(select per.id_periodo , lanc.id_lancamento from periodo per
+inner join lancamento lanc on per.id_periodo = 13 where lanc.id_lancamento = 12);
+
+insert into por (id_periodo , id_lancamento ) 
+(select per.id_periodo , lanc.id_lancamento from periodo per
+inner join lancamento lanc on per.id_periodo = 14 where lanc.id_lancamento = 12);
+
+insert into por (id_periodo , id_lancamento ) 
+(select per.id_periodo , lanc.id_lancamento from periodo per
+inner join lancamento lanc on per.id_periodo = 15 where lanc.id_lancamento = 13);
+
+insert into por (id_periodo , id_lancamento ) 
+(select per.id_periodo , lanc.id_lancamento from periodo per
+inner join lancamento lanc on per.id_periodo = 16 where lanc.id_lancamento = 14);
+
+insert into por (id_periodo , id_lancamento ) 
+(select per.id_periodo , lanc.id_lancamento from periodo per
+inner join lancamento lanc on per.id_periodo = 17 where lanc.id_lancamento = 15);
+
+insert into por (id_periodo , id_lancamento ) 
+(select per.id_periodo , lanc.id_lancamento from periodo per
+inner join lancamento lanc on per.id_periodo = 18 where lanc.id_lancamento = 16);
+
+insert into por (id_periodo , id_lancamento ) 
+(select per.id_periodo , lanc.id_lancamento from periodo per
+inner join lancamento lanc on per.id_periodo = 19 where lanc.id_lancamento = 17);
+
+insert into por (id_periodo , id_lancamento ) 
+(select per.id_periodo , lanc.id_lancamento from periodo per
+inner join lancamento lanc on per.id_periodo = 20 where lanc.id_lancamento = 18);
+
+
+select lanc.id_lancamento, per.id_periodo, func.nome_funcionario, lanc.total_vantagem, lanc.total_desconto, lanc.total_liquido, per.ano_periodo, per.mes, per.folha, per.status, per.qtd_funcionario, per.hora_final
+from periodo per 
+inner join por po on po.id_periodo = per.id_periodo
+inner join funcionario func on func.id_funcionario = func.id_funcionario
+inner join lancamento lanc on func.id_funcionario = lanc.id_funcionario;
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 
-select func.id_funcionario , func.nome_funcionario, cg.salario, cg.funcao
-from cargo cg
-inner join funcionario func on cg.cod_cargo = 147;
 
-
-select * from funcionario where cod_cargo = 147;
 
 
