@@ -573,11 +573,49 @@ insert into periodo ( ano_periodo , mes , folha , status , qtd_funcionario ) VAL
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-insert into lancamento (id_funcionario , total_vantagem , total_desconto , total_liquido , valor , parcela_inicial , parcela_final ) VALUES
-((select func.id_funcionario from funcionario func where id_funcionario = 1) , '500.00' , '2.500' , '2.000', '0', '0','0');
+select func.id_funcionario, func.nome_funcionario, carg.cod_cargo , carg.salario
+from funcionario func
+inner join cargo carg on carg.cod_cargo = func.cod_cargo;
+
 
 insert into lancamento (id_funcionario , total_vantagem , total_desconto , total_liquido , valor , parcela_inicial , parcela_final ) VALUES
-((select func.id_funcionario from funcionario func where id_funcionario = 2) , '500.00' , '2.500' , '2.000', '0', '0','0');
+((select func.id_funcionario from funcionario func where id_funcionario = 1) , '2500.00' , '500' , '2000.00', '0', '0','0');
+
+insert into lancamento (id_funcionario , total_vantagem , total_desconto , total_liquido , valor , parcela_inicial , parcela_final ) VALUES
+((select func.id_funcionario from funcionario func where id_funcionario = 2) , '2500.00' , '500' , '2000.00', '0', '0','0');
+
+insert into lancamento (id_funcionario, total_vantagem, total_desconto , total_liquido, valor , parcela_inicial , parcela_final ) VALUES
+((select func.id_funcionario from funcionario func where id_funcionario = 3) , '4500.00' , '800', '3700.00' ,'0', '0','0');
+
+insert into lancamento (id_funcionario, total_vantagem, total_desconto , total_liquido, valor , parcela_inicial , parcela_final ) VALUES
+((select func.id_funcionario from funcionario func where id_funcionario = 4) , '6500.00' , '1000.00', '5500.00' ,'0', '0','0');
+
+insert into lancamento (id_funcionario, total_vantagem, total_desconto , total_liquido, valor , parcela_inicial , parcela_final ) VALUES
+((select func.id_funcionario from funcionario func where id_funcionario = 5) , '3500.00' , '650.00', '2850.00' ,'0', '0','0');
+
+insert into lancamento (id_funcionario, total_vantagem, total_desconto , total_liquido, valor , parcela_inicial , parcela_final ) VALUES
+((select func.id_funcionario from funcionario func where id_funcionario = 6) , '5500.00' , '750.00', '4750.00' ,'0', '0','0');
+
+insert into lancamento (id_funcionario, total_vantagem, total_desconto , total_liquido, valor , parcela_inicial , parcela_final ) VALUES
+((select func.id_funcionario from funcionario func where id_funcionario = 7) , '2000.00' , '350.00', '1650.00' ,'3500.00', '1','12');
+
+insert into lancamento (id_funcionario, total_vantagem, total_desconto , total_liquido, valor , parcela_inicial , parcela_final ) VALUES
+((select func.id_funcionario from funcionario func where id_funcionario = 8) , '8500.00' , '350.00', '7000.00' ,'0', '0','0');
+
+insert into lancamento (id_funcionario, total_vantagem, total_desconto , total_liquido, valor , parcela_inicial , parcela_final ) VALUES
+((select func.id_funcionario from funcionario func where id_funcionario = 9) , '3000.00' , '400.00', '2300.00' ,'0', '0','0');
+
+insert into lancamento (id_funcionario, total_vantagem, total_desconto , total_liquido, valor , parcela_inicial , parcela_final ) VALUES
+((select func.id_funcionario from funcionario func where id_funcionario = 10) , '5500.00' , '800.00', '4700.00' ,'0', '0','0');
+
+insert into lancamento (id_funcionario, total_vantagem, total_desconto , total_liquido, valor , parcela_inicial , parcela_final ) VALUES
+((select func.id_funcionario from funcionario func where id_funcionario = 10) , '4000.00' , '600.00', '3400.00' ,'0', '0','0');
+
+
+
+select func.nome_funcionario, func.cpf_funcionario , func.ctps, lanc.id_lancamento, lanc.total_vantagem, lanc.total_desconto, lanc.total_liquido, lanc.valor, lanc.parcela_inicial, lanc.parcela_final
+from funcionario func 
+inner join lancamento lanc on lanc.id_funcionario = func.id_funcionario;
 
 
 
