@@ -779,31 +779,31 @@ select * from endereco;
 insert into endereco ( rua , bairro , numero_endereco , complemento , cep , ponto_referencia ) values
 ( 'Rua Gerson Monteiro Lima' , 'Jardim São Paulo' , 258 , 'Nº 458' , '50910-280' , 'Perto do Viaduto Laroque');
  
-insert into endereco ( id_fornecedor, rua , bairro , numero_endereco , complemento , cep , ponto_referencia ) values
+insert into endereco ( rua , bairro , numero_endereco , complemento , cep , ponto_referencia ) values
 ( 'Rua Sapé' , 'Areias' , 180 , 'Nº 354' , '50781-320' , 'Perto da UPA');
 
-insert into endereco ( id_fornecedor , rua , bairro , numero_endereco , complemento , cep , ponto_referencia ) values
+insert into endereco (  rua , bairro , numero_endereco , complemento , cep , ponto_referencia ) values
 ( 'Rua Lázaro Fontes' , 'Jiquiá' , 120 , 'Nº 201' , '50850-320' , 'Perto do Mercado Marcos');
 
-insert into endereco ( id_fornecedor , rua , bairro , numero_endereco , complemento , cep , ponto_referencia ) values
+insert into endereco (  rua , bairro , numero_endereco , complemento , cep , ponto_referencia ) values
 ( 'Rua Capitão Manuel de Aguiar' , 'Areias' , 180 , 'Nº 352' , '50870-110' , 'Perto do hospital local');
 
-insert into endereco ( id_fornecedor , rua , bairro , numero_endereco , complemento , cep , ponto_referencia ) values
+insert into endereco ( rua , bairro , numero_endereco , complemento , cep , ponto_referencia ) values
 ( 'Rua Major Mário Portelar' , 'Bongi' , 190 , 'Nº 474' , '50751-110' , 'Ao lado da farmacia independente');
 
-insert into endereco ( id_fornecedor , rua , bairro , numero_endereco , complemento , cep , ponto_referencia ) values
+insert into endereco (  rua , bairro , numero_endereco , complemento , cep , ponto_referencia ) values
 ( 'Rua Guamá' , 'Cohab' , 80 , 'Nº 124' , '51340-630' , 'Perto da Joana Bezerra');
 
 insert into endereco ( id_fornecedor , rua , bairro , numero_endereco , complemento , cep , ponto_referencia ) values
 ('Rua da Confraternização' , 'Boa Viagem' , 225 , 'Nº 441' , '51030-540' , 'Perto da Padaria Boa Viagem');
 
-insert into endereco ( id_fornecedor , rua , bairro , numero_endereco , complemento , cep , ponto_referencia ) values
+insert into endereco ( rua , bairro , numero_endereco , complemento , cep , ponto_referencia ) values
 ('Rua Pindorama', 'Mustardinha' , 188, 'Nº 488' , '50760-060' , 'Perto do Posto de Saude');
 
-insert into endereco ( id_fornecedor , rua , bairro , numero_endereco , complemento , cep , ponto_referencia ) values
+insert into endereco (  rua , bairro , numero_endereco , complemento , cep , ponto_referencia ) values
 ( 'Praça Cidade do Porto', 'Boa viagem' , 444, 'Nº 987' , '51111-280' , 'Perto do Extra');
 
-insert into endereco ( id_fornecedor , rua , bairro , numero_endereco , complemento , cep , ponto_referencia ) values
+insert into endereco ( rua , bairro , numero_endereco , complemento , cep , ponto_referencia ) values
 ( 'Rua Colares', 'Ibura' , 222, 'Nº 474' , '51240-400' , 'Perto do posto Br');
 
 
