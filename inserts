@@ -807,6 +807,7 @@ insert into endereco ( rua , bairro , numero_endereco , complemento , cep , pont
 ( 'Rua Colares', 'Ibura' , 222, 'Nº 474' , '51240-400' , 'Perto do posto Br');
 
 
+SELECT * from endereco;
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- Para cadastrar endereço do fornecedor.. devemos cadastrar um fornecedor e um endereço.. após isso iremos inserir os codigos na tabela tem_1
 
@@ -814,9 +815,45 @@ insert into tem_1 (id_fornecedor , id_endereco)
 (select forn.id_fornecedor , ende.id_endereco from fornecedor forn
 inner join endereco ende on forn.id_fornecedor = 1 and ende.id_endereco = 52);
 
+insert into tem_1 (id_fornecedor , id_endereco)
+(select forn.id_fornecedor , ende.id_endereco from fornecedor forn
+inner join endereco ende on forn.id_fornecedor = 2 and ende.id_endereco = 58);
+
+insert into tem_1 (id_fornecedor , id_endereco)
+(select forn.id_fornecedor , ende.id_endereco from fornecedor forn
+inner join endereco ende on forn.id_fornecedor = 3 and ende.id_endereco = 59);
+
+insert into tem_1 (id_fornecedor , id_endereco)
+(select forn.id_fornecedor , ende.id_endereco from fornecedor forn
+inner join endereco ende on forn.id_fornecedor = 4 and ende.id_endereco = 60);
+
+insert into tem_1 (id_fornecedor , id_endereco)
+(select forn.id_fornecedor , ende.id_endereco from fornecedor forn
+inner join endereco ende on forn.id_fornecedor = 5 and ende.id_endereco = 61);
+
+insert into tem_1 (id_fornecedor , id_endereco)
+(select forn.id_fornecedor , ende.id_endereco from fornecedor forn
+inner join endereco ende on forn.id_fornecedor = 6 and ende.id_endereco = 62);
+
+insert into tem_1 (id_fornecedor , id_endereco)
+(select forn.id_fornecedor , ende.id_endereco from fornecedor forn
+inner join endereco ende on forn.id_fornecedor = 7 and ende.id_endereco = 63);
+
+insert into tem_1 (id_fornecedor , id_endereco)
+(select forn.id_fornecedor , ende.id_endereco from fornecedor forn
+inner join endereco ende on forn.id_fornecedor = 8 and ende.id_endereco = 64);
+
+insert into tem_1 (id_fornecedor , id_endereco)
+(select forn.id_fornecedor , ende.id_endereco from fornecedor forn
+inner join endereco ende on forn.id_fornecedor = 9 and ende.id_endereco = 65);
+
+insert into tem_1 (id_fornecedor , id_endereco)
+(select forn.id_fornecedor , ende.id_endereco from fornecedor forn
+inner join endereco ende on forn.id_fornecedor = 10 and ende.id_endereco = 66);
+
 
 select forn.id_fornecedor , ende.id_endereco , forn.razao_social , forn.nome_fantasia , forn.cnpj, forn.telefone_fornecedor, forn.data_cadastrofornecedor, forn.email_fornecedor,
 ende.rua, ende.bairro, ende.numero_endereco, ende.complemento, ende.cep, ende.ponto_referencia, tem.id_endereco 
 from tem_1 tem
-inner join endereco ende on tem.id_fornecedor = 1 and ende.id_endereco = 52
+inner join endereco ende on tem.id_endereco = ende.id_endereco
 inner join fornecedor forn on forn.id_fornecedor = tem.id_fornecedor;
