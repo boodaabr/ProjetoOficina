@@ -771,3 +771,52 @@ insert into fornecedor (razao_social , nome_fantasia , cnpj , telefone_fornecedo
 ('Marcelo Paulo' , 'Marcelo AutoPartes' , '25.835.362/0001-23' , '81 34114-6492' , '2022-03-12' , 'marcelopartes@gmail.com' );
 
 
+                 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+select * from endereco;
+
+insert into endereco ( rua , bairro , numero_endereco , complemento , cep , ponto_referencia ) values
+( 'Rua Gerson Monteiro Lima' , 'Jardim São Paulo' , 258 , 'Nº 458' , '50910-280' , 'Perto do Viaduto Laroque');
+ 
+insert into endereco ( id_fornecedor, rua , bairro , numero_endereco , complemento , cep , ponto_referencia ) values
+( 'Rua Sapé' , 'Areias' , 180 , 'Nº 354' , '50781-320' , 'Perto da UPA');
+
+insert into endereco ( id_fornecedor , rua , bairro , numero_endereco , complemento , cep , ponto_referencia ) values
+( 'Rua Lázaro Fontes' , 'Jiquiá' , 120 , 'Nº 201' , '50850-320' , 'Perto do Mercado Marcos');
+
+insert into endereco ( id_fornecedor , rua , bairro , numero_endereco , complemento , cep , ponto_referencia ) values
+( 'Rua Capitão Manuel de Aguiar' , 'Areias' , 180 , 'Nº 352' , '50870-110' , 'Perto do hospital local');
+
+insert into endereco ( id_fornecedor , rua , bairro , numero_endereco , complemento , cep , ponto_referencia ) values
+( 'Rua Major Mário Portelar' , 'Bongi' , 190 , 'Nº 474' , '50751-110' , 'Ao lado da farmacia independente');
+
+insert into endereco ( id_fornecedor , rua , bairro , numero_endereco , complemento , cep , ponto_referencia ) values
+( 'Rua Guamá' , 'Cohab' , 80 , 'Nº 124' , '51340-630' , 'Perto da Joana Bezerra');
+
+insert into endereco ( id_fornecedor , rua , bairro , numero_endereco , complemento , cep , ponto_referencia ) values
+('Rua da Confraternização' , 'Boa Viagem' , 225 , 'Nº 441' , '51030-540' , 'Perto da Padaria Boa Viagem');
+
+insert into endereco ( id_fornecedor , rua , bairro , numero_endereco , complemento , cep , ponto_referencia ) values
+('Rua Pindorama', 'Mustardinha' , 188, 'Nº 488' , '50760-060' , 'Perto do Posto de Saude');
+
+insert into endereco ( id_fornecedor , rua , bairro , numero_endereco , complemento , cep , ponto_referencia ) values
+( 'Praça Cidade do Porto', 'Boa viagem' , 444, 'Nº 987' , '51111-280' , 'Perto do Extra');
+
+insert into endereco ( id_fornecedor , rua , bairro , numero_endereco , complemento , cep , ponto_referencia ) values
+( 'Rua Colares', 'Ibura' , 222, 'Nº 474' , '51240-400' , 'Perto do posto Br');
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-- Para cadastrar endereço do fornecedor.. devemos cadastrar um fornecedor e um endereço.. após isso iremos inserir os codigos na tabela tem_1
+
+insert into tem_1 (id_fornecedor , id_endereco)
+(select forn.id_fornecedor , ende.id_endereco from fornecedor forn
+inner join endereco ende on forn.id_fornecedor = 1 and ende.id_endereco = 52);
+
+
+select forn.id_fornecedor , ende.id_endereco , forn.razao_social , forn.nome_fantasia , forn.cnpj, forn.telefone_fornecedor, forn.data_cadastrofornecedor, forn.email_fornecedor,
+ende.rua, ende.bairro, ende.numero_endereco, ende.complemento, ende.cep, ende.ponto_referencia, tem.id_endereco 
+from tem_1 tem
+inner join endereco ende on tem.id_fornecedor = 1 and ende.id_endereco = 52
+inner join fornecedor forn on forn.id_fornecedor = tem.id_fornecedor;
