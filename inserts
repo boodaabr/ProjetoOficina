@@ -794,7 +794,7 @@ insert into endereco ( rua , bairro , numero_endereco , complemento , cep , pont
 insert into endereco (  rua , bairro , numero_endereco , complemento , cep , ponto_referencia ) values
 ( 'Rua Guamá' , 'Cohab' , 80 , 'Nº 124' , '51340-630' , 'Perto da Joana Bezerra');
 
-insert into endereco ( id_fornecedor , rua , bairro , numero_endereco , complemento , cep , ponto_referencia ) values
+insert into endereco (  rua , bairro , numero_endereco , complemento , cep , ponto_referencia ) values
 ('Rua da Confraternização' , 'Boa Viagem' , 225 , 'Nº 441' , '51030-540' , 'Perto da Padaria Boa Viagem');
 
 insert into endereco ( rua , bairro , numero_endereco , complemento , cep , ponto_referencia ) values
