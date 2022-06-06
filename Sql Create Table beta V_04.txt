@@ -1,3 +1,5 @@
+begin;
+
 CREATE TABLE periodo (
 id_periodo serial PRIMARY KEY,
 ano_periodo date,
@@ -218,3 +220,5 @@ ALTER TABLE carro ADD FOREIGN KEY(id_cliente) REFERENCES cliente (id_cliente);
 ALTER TABLE funcionario ADD FOREIGN KEY(id_oficina) REFERENCES oficina (id_oficina);
 ALTER TABLE endereco ADD FOREIGN KEY(id_cliente) REFERENCES cliente (id_cliente);
 ALTER TABLE endereco ADD FOREIGN KEY(id_oficina) REFERENCES oficina (id_oficina);
+
+commit;
