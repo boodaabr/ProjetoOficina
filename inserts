@@ -485,7 +485,7 @@ insert into eventos ( nome_evento , descricao , horadacriacao ,tipo_evento, inci
 ('Hora Adicional' , 'Refere-se a hora extra do funcionario' , '14 Horas - Data: 01/06/22' , 'Provento' , 'Sim', 'Não', 'Não' );
 
 insert into eventos ( nome_evento , descricao , horadacriacao ,tipo_evento, incide_13, incide_ferias, incide_outros ) values 
-('Salario' , 'Refere-se ao salario base no funcionario' , '13 Horas - Data: 01/06/22' , 'Provento','Sim', 'Sim', 'Não' ); 
+('Adicional Norturno' , 'Refere-se ao horario adicional noturno' , '13 Horas - Data: 01/06/22' , 'Provento','Sim', 'Sim', 'Não' ); 
 
 insert into eventos ( nome_evento , descricao , horadacriacao ,tipo_evento, incide_13, incide_ferias, incide_outros ) values 
 ('INSS' , 'Refere-se ao desconto do INSS' , '14 Horas - Data: 01/06/22' , 'Desconto','Sim', 'Sim', 'Não' ); 
@@ -507,6 +507,9 @@ insert into eventos ( nome_evento , descricao , horadacriacao ,tipo_evento, inci
 
 insert into eventos ( nome_evento , descricao , horadacriacao ,tipo_evento, incide_13, incide_ferias, incide_outros ) values 
 ('Férias' , 'Refere-se as férias do funcionario' , '14 Horas - Data: 01/06/22' , 'Desconto','Sim', 'Sim', 'Não' ); 
+
+insert into eventos ( nome_evento , descricao , horadacriacao ,tipo_evento, incide_13, incide_ferias, incide_outros ) values 
+('Emprestimo' , 'Caso o funcionario queria emprestimo' , '14 Horas - Data: 01/06/22' , 'Desconto','Não', 'Não', 'Não' ); 
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -707,10 +710,64 @@ inner join funcionario func on func.id_funcionario = func.id_funcionario
 inner join lancamento lanc on func.id_funcionario = lanc.id_funcionario;
 
 
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--Abaixo eu consigo colocar evento por evento em cada cliente, mas o ideal era inserir o evento 1 para todos os funcionarios --
+
+insert into consta (id_lancamento , id_evento ) values
+(1 ,1);
+
+insert into consta (id_lancamento , id_evento ) values
+(2 ,1);
+ 
+ 
+insert into consta (id_lancamento , id_evento ) values
+(2 ,2);
+ 
+SELECT * from lancamento; 
+
+select * from eventos; 
+ 
+select * from lancamento; 
+
+select * from consta;
+
+select ev.id_evento, ev.nome_evento, ev.descricao, lanc.id_funcionario, func.nome_funcionario 
+from eventos ev
+inner join consta cons on cons.id_evento = ev.id_evento
+inner join lancamento lanc on lanc.id_lancamento = cons.id_lancamento
+inner join funcionario func on func.id_funcionario = lanc.id_funcionario;
+
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+insert into fornecedor (razao_social , nome_fantasia , cnpj , telefone_fornecedor , data_cadastrofornecedor , email_fornecedor ) VALUES
+('Julio Batista' , 'Julio AutoPeças' , '70.358.429/0001-30', '81 3325-5541' , '2022-01-08' , 'Juliopecas@gmail.com' );
 
+insert into fornecedor (razao_social , nome_fantasia , cnpj , telefone_fornecedor , data_cadastrofornecedor , email_fornecedor ) VALUES
+('Marcos Faria' , 'Marquinho Peças' , '85.100.159/0001-30', '81 3998-8854' , '2022-02-10' , 'marquinhopeca@gmail.com' );
 
+insert into fornecedor (razao_social , nome_fantasia , cnpj , telefone_fornecedor , data_cadastrofornecedor , email_fornecedor ) VALUES
+('Jackson de Souza' , 'Jackson Distribuidora' , '55.682.003/0001-44', '81 34874-1122' , '2022-02-11' , 'jacksondistribuidora@gmail.com' );
 
+insert into fornecedor (razao_social , nome_fantasia , cnpj , telefone_fornecedor , data_cadastrofornecedor , email_fornecedor ) VALUES
+('Felipe Marques' , 'Lipe Peças' , '55.682.003/0001-44' , '81 34896-3366' , '2022-02-15' , 'lipepeca@gmail.com' );
+
+insert into fornecedor (razao_social , nome_fantasia , cnpj , telefone_fornecedor , data_cadastrofornecedor , email_fornecedor ) VALUES
+('Jose Luis' , 'Jolis Peças' , '17.924.761/0001-32' , '81 34552-5546' , '2022-02-18' , 'jolispecas@gmail.com' );
+
+insert into fornecedor (razao_social , nome_fantasia , cnpj , telefone_fornecedor , data_cadastrofornecedor , email_fornecedor ) VALUES
+('Paulo Flavio' , 'Distribuidora Paulinho' , '66.494.023/0001-08' , '81 34221-9985' , '2022-02-20' , 'paulinhopecas@gmail.com' );
+
+insert into fornecedor (razao_social , nome_fantasia , cnpj , telefone_fornecedor , data_cadastrofornecedor , email_fornecedor ) VALUES
+('Danilo Junior' , 'Danilo Auto Parts' , '90.697.232/0001-33' , '81 35221-7744' , '2022-03-05' , 'daniloparts@gmail.com' );
+
+insert into fornecedor (razao_social , nome_fantasia , cnpj , telefone_fornecedor , data_cadastrofornecedor , email_fornecedor ) VALUES
+('Vinicius Soares' , 'Vini Auto Peças' , '47.241.043/0001-22' , '81 34419-5566' , '2022-03-08' , 'viniautopecas@gmail.com' );
+
+insert into fornecedor (razao_social , nome_fantasia , cnpj , telefone_fornecedor , data_cadastrofornecedor , email_fornecedor ) VALUES
+('Tarcisio Marques' , 'Centro Distribuição Tarcisio' , '29.156.101/0001-38' , '81 35541-2213' , '2022-03-10' , 'tarcisiodistri@gmail.com' );
+
+insert into fornecedor (razao_social , nome_fantasia , cnpj , telefone_fornecedor , data_cadastrofornecedor , email_fornecedor ) VALUES
+('Marcelo Paulo' , 'Marcelo AutoPartes' , '25.835.362/0001-23' , '81 34114-6492' , '2022-03-12' , 'marcelopartes@gmail.com' );
 
 
