@@ -11,11 +11,11 @@ hora_final varchar(25)
 CREATE TABLE dependentes (
 id_dependente serial PRIMARY KEY,
 id_funcionario INTEGER,
+cpf_dependente varchar(20),
 nome_dependente varchar(150) NOT NULL,
 parentesco  varchar(50) NOT NULL,
 idade_dependente  integer NOT NULL,
-cpf_dependente varchar(20),
-naturalidade varchar(20),
+naturalidade varchar(50),
 situacao_dependente text
 );
 
@@ -88,11 +88,11 @@ categoria varchar(60)
 CREATE TABLE carro (
 id_carro serial PRIMARY KEY,
 id_cliente INTEGER NOT NULL,
+placa varchar(10),
 marca varchar(20) NOT NULL,
 modelo varchar(20) NOT NULL,
 cor_carro varchar(20) NOT NULL,
 ano_carro varchar(25),
-placa varchar(10),
 km_atual varchar(100),
 tipo_combustivel varchar(20),
 observacao_carro text
@@ -128,12 +128,12 @@ FOREIGN KEY(id_funcionario) REFERENCES funcionario (id_funcionario)
 
 CREATE TABLE oficina (
 id_oficina serial PRIMARY KEY,
+ cnpj varchar(40),
 nome_oficina varchar(100),
 horario_abertura varchar(30),
 email_oficina varchar(150),
 horario_encerramento varchar(20),
-telefone_oficina varchar(50),
-cnpj varchar(40)
+telefone_oficina varchar(50)
 );
 
 CREATE TABLE cliente (
