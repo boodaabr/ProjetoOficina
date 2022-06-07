@@ -903,38 +903,84 @@ insert into envia (id_produto , id_fornecedor )
  
 insert into envia (id_produto , id_fornecedor )  
 (select forn.id_fornecedor , prod.id_produto   from fornecedor forn 
-inner join produto prod on prod.id_produto = 2 and forn.id_fornecedor = 1);
+inner join produto prod on prod.id_produto = 2 and forn.id_fornecedor = 2);
 
 insert into envia (id_produto , id_fornecedor )  
 (select forn.id_fornecedor , prod.id_produto   from fornecedor forn 
-inner join produto prod on prod.id_produto = 3 and forn.id_fornecedor = 2);
+inner join produto prod on prod.id_produto = 3 and forn.id_fornecedor = 3);
 
 insert into envia (id_produto , id_fornecedor )  
 (select forn.id_fornecedor , prod.id_produto   from fornecedor forn 
-inner join produto prod on prod.id_produto = 4 and forn.id_fornecedor = 3);
+inner join produto prod on prod.id_produto = 4 and forn.id_fornecedor = 4);
  
 insert into envia (id_produto , id_fornecedor )  
 (select forn.id_fornecedor , prod.id_produto   from fornecedor forn 
-inner join produto prod on prod.id_produto = 5 and forn.id_fornecedor = 3);
+inner join produto prod on prod.id_produto = 5 and forn.id_fornecedor = 5);
 
 insert into envia (id_produto , id_fornecedor )  
 (select forn.id_fornecedor , prod.id_produto   from fornecedor forn 
-inner join produto prod on prod.id_produto = 6 and forn.id_fornecedor = 4);
+inner join produto prod on prod.id_produto = 6 and forn.id_fornecedor = 6);
 
 insert into envia (id_produto , id_fornecedor )  
 (select forn.id_fornecedor , prod.id_produto   from fornecedor forn 
-inner join produto prod on prod.id_produto = 7 and forn.id_fornecedor = 5);
+inner join produto prod on prod.id_produto = 7 and forn.id_fornecedor = 7);
 
 insert into envia (id_produto , id_fornecedor )  
 (select forn.id_fornecedor , prod.id_produto   from fornecedor forn 
-inner join produto prod on prod.id_produto = 8 and forn.id_fornecedor = 6);
+inner join produto prod on prod.id_produto = 8 and forn.id_fornecedor = 8);
 
 insert into envia (id_produto , id_fornecedor )  
 (select forn.id_fornecedor , prod.id_produto   from fornecedor forn 
-inner join produto prod on prod.id_produto = 9 and forn.id_fornecedor = 7);
+inner join produto prod on prod.id_produto = 9 and forn.id_fornecedor = 9);
 
 insert into envia (id_produto , id_fornecedor )  
 (select forn.id_fornecedor , prod.id_produto   from fornecedor forn 
-inner join produto prod on prod.id_produto = 10 and forn.id_fornecedor = 8);
+inner join produto prod on prod.id_produto = 10 and forn.id_fornecedor = 10);
 
+select  prod.id_produto, forn.id_fornecedor, forn.cnpj , forn.razao_social , forn.nome_fantasia, prod.codigo_barras, prod.descricao_produto, prod.fabricante, prod.quantidade,
+		prod.preco_custo, prod.preco_venda, prod.montadora , prod.garantia, prod.data_cadastro_produto, prod.categoria 
+from envia env
+inner join fornecedor forn on forn.id_fornecedor = env.id_fornecedor
+inner join produto prod on prod.id_produto = env.id_produto;        
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+insert into vai (id_produto , id_estoque ) 
+(select prod.id_produto , est.id_estoque from produto prod 
+ inner join 
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+ 
+-- insert into estoque (descricao_produtoestoque, quantidade , estoque_minimo , estoque_maximo , preco_unitario , data_compraproduto ) VALUES
+--('Kit Correa Palio 2010 à 2015', 25 , 5 , 50 , '400.00' , '2022-02-05' );
+
+--insert into estoque (descricao_produtoestoque, quantidade , estoque_minimo , estoque_maximo , preco_unitario , data_compraproduto ) VALUES
+--('Filtro Ar Condicionado Onix 2020 à 2022', 15 , 5 , 60 , '120.00' , '2022-02-05' );
+
+--insert into estoque (descricao_produtoestoque, quantidade , estoque_minimo , estoque_maximo , preco_unitario , data_compraproduto ) VALUES
+--('Filto de Oleo Onix 2020 à 2022', 70 , 5 , 120 , '100.00' , '2022-02-05' );
+
+--insert into estoque (descricao_produtoestoque, quantidade , estoque_minimo , estoque_maximo , preco_unitario , data_compraproduto ) VALUES
+--('Filto de Oleo Civic 2020 à 2022', 25 , 10 , 100 , '180.00' , '2022-01-25' );
+
+--insert into estoque (descricao_produtoestoque, quantidade , estoque_minimo , estoque_maximo , preco_unitario , data_compraproduto ) VALUES
+--('Conjunto Vidro Eletrico GOL 2020 à 2022', 25 , 10 , 100 , '500.00' , '2022-01-26' );
+
+--insert into estoque (descricao_produtoestoque, quantidade , estoque_minimo , estoque_maximo , preco_unitario , data_compraproduto ) VALUES
+--('Kit 4 Amortecedores Corolla 2019 à 2022', 30 , 10 , 50 , '2500.00' , '2022-01-26' );
+
+--insert into estoque (descricao_produtoestoque, quantidade , estoque_minimo , estoque_maximo , preco_unitario , data_compraproduto ) VALUES
+--('Par Farol Fiat Argo 2019 à 2022', 12 , 10 , 50 , '1600.00' , '2022-01-26' );
+
+--insert into estoque (descricao_produtoestoque, quantidade , estoque_minimo , estoque_maximo , preco_unitario , data_compraproduto ) VALUES
+--('Bomba D agua Jeep Renegade ', 2 , 10 , 15 , '1200.00' , '2022-01-26' );
+
+--insert into estoque (descricao_produtoestoque, quantidade , estoque_minimo , estoque_maximo , preco_unitario , data_compraproduto ) VALUES
+--('Kit Sistema Arrefecimento Peugeot 2018 à 2022', 10 , 10 , 25 , '1500.00' , '2022-01-26' );
+
+--insert into estoque (descricao_produtoestoque, quantidade , estoque_minimo , estoque_maximo , preco_unitario , data_compraproduto ) VALUES
+--('Kit Embreagem Fiat Uno 2015 à 2022', 20 , 10 , 50 , '1900.00' , '2022-01-26' );
+
+select * from estoque;
 
