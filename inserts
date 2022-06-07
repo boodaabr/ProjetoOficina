@@ -813,43 +813,43 @@ SELECT * from endereco;
 
 insert into tem_1 (id_fornecedor , id_endereco)
 (select forn.id_fornecedor , ende.id_endereco from fornecedor forn
-inner join endereco ende on forn.id_fornecedor = 1 and ende.id_endereco = 52);
+inner join endereco ende on forn.id_fornecedor = 1 and ende.id_endereco = 37);
 
 insert into tem_1 (id_fornecedor , id_endereco)
 (select forn.id_fornecedor , ende.id_endereco from fornecedor forn
-inner join endereco ende on forn.id_fornecedor = 2 and ende.id_endereco = 58);
+inner join endereco ende on forn.id_fornecedor = 2 and ende.id_endereco = 38);
 
 insert into tem_1 (id_fornecedor , id_endereco)
 (select forn.id_fornecedor , ende.id_endereco from fornecedor forn
-inner join endereco ende on forn.id_fornecedor = 3 and ende.id_endereco = 59);
+inner join endereco ende on forn.id_fornecedor = 3 and ende.id_endereco = 39);
 
 insert into tem_1 (id_fornecedor , id_endereco)
 (select forn.id_fornecedor , ende.id_endereco from fornecedor forn
-inner join endereco ende on forn.id_fornecedor = 4 and ende.id_endereco = 60);
+inner join endereco ende on forn.id_fornecedor = 4 and ende.id_endereco = 40);
 
 insert into tem_1 (id_fornecedor , id_endereco)
 (select forn.id_fornecedor , ende.id_endereco from fornecedor forn
-inner join endereco ende on forn.id_fornecedor = 5 and ende.id_endereco = 61);
+inner join endereco ende on forn.id_fornecedor = 5 and ende.id_endereco = 41);
 
 insert into tem_1 (id_fornecedor , id_endereco)
 (select forn.id_fornecedor , ende.id_endereco from fornecedor forn
-inner join endereco ende on forn.id_fornecedor = 6 and ende.id_endereco = 62);
+inner join endereco ende on forn.id_fornecedor = 6 and ende.id_endereco = 42);
 
 insert into tem_1 (id_fornecedor , id_endereco)
 (select forn.id_fornecedor , ende.id_endereco from fornecedor forn
-inner join endereco ende on forn.id_fornecedor = 7 and ende.id_endereco = 63);
+inner join endereco ende on forn.id_fornecedor = 7 and ende.id_endereco = 43);
 
 insert into tem_1 (id_fornecedor , id_endereco)
 (select forn.id_fornecedor , ende.id_endereco from fornecedor forn
-inner join endereco ende on forn.id_fornecedor = 8 and ende.id_endereco = 64);
+inner join endereco ende on forn.id_fornecedor = 8 and ende.id_endereco = 44);
 
 insert into tem_1 (id_fornecedor , id_endereco)
 (select forn.id_fornecedor , ende.id_endereco from fornecedor forn
-inner join endereco ende on forn.id_fornecedor = 9 and ende.id_endereco = 65);
+inner join endereco ende on forn.id_fornecedor = 9 and ende.id_endereco = 45);
 
 insert into tem_1 (id_fornecedor , id_endereco)
 (select forn.id_fornecedor , ende.id_endereco from fornecedor forn
-inner join endereco ende on forn.id_fornecedor = 10 and ende.id_endereco = 66);
+inner join endereco ende on forn.id_fornecedor = 10 and ende.id_endereco = 46);
 
 
 select forn.id_fornecedor , ende.id_endereco , forn.razao_social , forn.nome_fantasia , forn.cnpj, forn.telefone_fornecedor, forn.data_cadastrofornecedor, forn.email_fornecedor,
@@ -857,3 +857,83 @@ ende.rua, ende.bairro, ende.numero_endereco, ende.complemento, ende.cep, ende.po
 from tem_1 tem
 inner join endereco ende on tem.id_endereco = ende.id_endereco
 inner join fornecedor forn on forn.id_fornecedor = tem.id_fornecedor;
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+insert into produto (codigo_barras , descricao_produto, fabricante, quantidade, preco_custo, preco_venda, montadora, garantia, data_cadastro_produto, categoria) VALUES
+('41806774666' , 'Kit Amortecedor Fiat Dianteiro e Traseiro' , '3M' , 20 , '1200.00' , '1800.00' , 'Fiat' , 90 , '05-02-2022', 'Kit Amortecedor Fiat');
+
+insert into produto (codigo_barras , descricao_produto, fabricante, quantidade, preco_custo, preco_venda, montadora, garantia, data_cadastro_produto, categoria) VALUES
+('00509590402' , 'Kit Vela e Correa' , 'Bosch' , 50 , '750.00' , '950.00' , 'GM' , 90 , '05-02-2022', 'Vela e Correa');
+
+insert into produto (codigo_barras , descricao_produto, fabricante, quantidade, preco_custo, preco_venda, montadora, garantia, data_cadastro_produto, categoria) VALUES
+('80836270730' , 'Kit Revisão Toyota' , 'NGK' , 55 , '800.00' , '1200.00' , 'Toyota' , 90 , '05-02-2022', 'Kit Revisão Toyota');
+
+insert into produto (codigo_barras , descricao_produto, fabricante, quantidade, preco_custo, preco_venda, montadora, garantia, data_cadastro_produto, categoria) VALUES
+('07959955240' , 'Kit Revisão Honda' , 'Nakata' , 60 , '850.00' , '1300.00' , 'Honda' , 90 , '06-02-2022', 'Kit Revisão Honda');
+
+insert into produto (codigo_barras , descricao_produto, fabricante, quantidade, preco_custo, preco_venda, montadora, garantia, data_cadastro_produto, categoria) VALUES
+('00678140304' , 'Kit Revisão GM' , 'Wega' , 40 , '450.00' , '850.00' , 'GM' , 90 , '06-02-2022', 'Kit Revisão GM');
+
+insert into produto (codigo_barras , descricao_produto, fabricante, quantidade, preco_custo, preco_venda, montadora, garantia, data_cadastro_produto, categoria) VALUES
+('20576466838' , 'Kit Revisão Peugeot' , 'NGK' , 50 , '800.00' , '1200.00' , 'Peugeot' , 90 , '06-02-2022', 'Kit Revisão Peugeot');
+
+insert into produto (codigo_barras , descricao_produto, fabricante, quantidade, preco_custo, preco_venda, montadora, garantia, data_cadastro_produto, categoria) VALUES
+('53524489302' , 'Kit Amortecedor Toyota Dianteiro e Traseiro' , 'Bosch' , 50 , '1500.00' , '1800.00' , 'Toyota' , 90 , '06-02-2022', 'Kit Amortecedor Toyota');
+
+insert into produto (codigo_barras , descricao_produto, fabricante, quantidade, preco_custo, preco_venda, montadora, garantia, data_cadastro_produto, categoria) VALUES
+('22052020144' , 'Kit Amortecedor Honda Dianteiro e Traseiro' , 'Nakata' , 50 , '1450.00' , '1750.00' , 'Honda' , 90 , '06-02-2022', 'Kit Amortecedor Honda');
+
+insert into produto (codigo_barras , descricao_produto, fabricante, quantidade, preco_custo, preco_venda, montadora, garantia, data_cadastro_produto, categoria) VALUES
+('21147244874' , 'Kit Amortecedor GM Dianteiro e Traseiro' , 'Wega' , 50 , '1000.00' , '1350.00' , 'GM' , 90 , '06-02-2022', 'Kit Amortecedor GM');
+
+insert into produto (codigo_barras , descricao_produto, fabricante, quantidade, preco_custo, preco_venda, montadora, garantia, data_cadastro_produto, categoria) VALUES
+('21147244874' , 'Kit Amortecedor Peugeot Dianteiro e Traseiro' , 'NGK' , 50 , '1250.00' , '1700.00' , 'Peugeot' , 90 , '06-02-2022', 'Kit Amortecedor Peugeot');
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+select * from produto; 
+
+select * from fornecedor;
+
+select * from envia;
+
+insert into envia (id_produto , id_fornecedor )  
+(select forn.id_fornecedor , prod.id_produto   from fornecedor forn 
+ inner join produto prod on prod.id_produto = 1 and forn.id_fornecedor = 1);
+ 
+insert into envia (id_produto , id_fornecedor )  
+(select forn.id_fornecedor , prod.id_produto   from fornecedor forn 
+inner join produto prod on prod.id_produto = 2 and forn.id_fornecedor = 1);
+
+insert into envia (id_produto , id_fornecedor )  
+(select forn.id_fornecedor , prod.id_produto   from fornecedor forn 
+inner join produto prod on prod.id_produto = 3 and forn.id_fornecedor = 2);
+
+insert into envia (id_produto , id_fornecedor )  
+(select forn.id_fornecedor , prod.id_produto   from fornecedor forn 
+inner join produto prod on prod.id_produto = 4 and forn.id_fornecedor = 3);
+ 
+insert into envia (id_produto , id_fornecedor )  
+(select forn.id_fornecedor , prod.id_produto   from fornecedor forn 
+inner join produto prod on prod.id_produto = 5 and forn.id_fornecedor = 3);
+
+insert into envia (id_produto , id_fornecedor )  
+(select forn.id_fornecedor , prod.id_produto   from fornecedor forn 
+inner join produto prod on prod.id_produto = 6 and forn.id_fornecedor = 4);
+
+insert into envia (id_produto , id_fornecedor )  
+(select forn.id_fornecedor , prod.id_produto   from fornecedor forn 
+inner join produto prod on prod.id_produto = 7 and forn.id_fornecedor = 5);
+
+insert into envia (id_produto , id_fornecedor )  
+(select forn.id_fornecedor , prod.id_produto   from fornecedor forn 
+inner join produto prod on prod.id_produto = 8 and forn.id_fornecedor = 6);
+
+insert into envia (id_produto , id_fornecedor )  
+(select forn.id_fornecedor , prod.id_produto   from fornecedor forn 
+inner join produto prod on prod.id_produto = 9 and forn.id_fornecedor = 7);
+
+insert into envia (id_produto , id_fornecedor )  
+(select forn.id_fornecedor , prod.id_produto   from fornecedor forn 
+inner join produto prod on prod.id_produto = 10 and forn.id_fornecedor = 8);
+
