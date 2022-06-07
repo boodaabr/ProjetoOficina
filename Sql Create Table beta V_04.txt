@@ -82,7 +82,7 @@ quantidade integer,
 preco_custo numeric(9,2),
 preco_venda numeric(9,2),
 montadora varchar(60) NOT NULL,
-garantia integer,
+garantia varchar(25),
 data_cadastro_produto date,
 categoria varchar(60)
 );
