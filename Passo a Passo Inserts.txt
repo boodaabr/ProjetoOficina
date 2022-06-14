@@ -8,9 +8,9 @@ Sequencia para os Inserts.
 
 ----------------------------------------------------------------------------------------------------
 
--> Tabela ENDEREÇO (CLIENTE)
+-> Tabela ENDEREÃ‡O (CLIENTE)
 
- 1 = Inserir endereço do cliente , Devemos informar o ID_CLIENTE
+ 1 = Para inserirmos o endereÃ§o do cliente , Devemos informar o ID_CLIENTE
 
 EXEMPLO: insert into endereco (id_cliente, rua , bairro, numero_endereco, complemento, cep, ponto_referencia ) VALUES
 	 ((select c.id_cliente from cliente c where id_cliente = 1) , 'Rua sa e souza', 'Boa Viagem',  128 , 'Apt 201', '51030-065', 'Ao lado da farmacia Drogasil'); 
@@ -32,7 +32,7 @@ EXEMPLO: insert into endereco (id_cliente, rua , bairro, numero_endereco, comple
 
 -> Tabela REALIZA ( Relacionamento entre CARRO e AGENDAMENTO ):
 
---> Essa tabela fica responsavel da comunicação entre as tabelas agendamento e carro <--
+--> Essa tabela fica responsavel da comunicaÃ§Ã£o entre as tabelas agendamento e carro <--
 
    1 = Inserir na tabela realiza , informando o ID_CARRO e o ID_AGENDAMENTO
 
@@ -48,12 +48,12 @@ EXEMPLO: insert into realiza (id_agendamento ,id_carro )
 
 ----------------------------------------------------------------------------------------------------
 
--> Tabela Endereço (Oficina) 
+-> Tabela EndereÃ§o (Oficina) 
 
- 1 = Inserir endereço da Oficina , Devemos informar o ID_OFICINA
+ 1 = Inserir endereÃ§o da Oficina , Devemos informar o ID_OFICINA
 
 EXEMPLO: insert into endereco (id_oficina, rua , bairro , numero_endereco , complemento , cep, ponto_referencia ) Values 
-	 ((select ofc.id_oficina from oficina ofc where id_oficina = 1) , 'Av Caxanga', 'Iputinga',  261 , 'Nº 850', '56011-774', 'Por tras do mercado Maria');
+	 ((select ofc.id_oficina from oficina ofc where id_oficina = 1) , 'Av Caxanga', 'Iputinga',  261 , 'NÂº 850', '56011-774', 'Por tras do mercado Maria');
 
 
 ----------------------------------------------------------------------------------------------------
@@ -67,17 +67,17 @@ EXEMPLO: insert into endereco (id_oficina, rua , bairro , numero_endereco , comp
 
 -> Tabela Funcionario 
 
-  1 = Inserir Funcionario , Devemos informar o ID_OFICINA e o Codigo do Cargo, no exemplo abaixo vemos que o codigo é 147
+  1 = Inserir Funcionario , Devemos informar o ID_OFICINA e o Codigo do Cargo, no exemplo abaixo vemos que o codigo Ã© 147
 
 EXEMPLO: insert into funcionario (id_oficina, cod_cargo, nome_funcionario, matricula, cpf_funcionario, data_nascimento_func, ctps, data_admissao , tipo_sanguineo) VALUES
-         ((select o.id_oficina from oficina o where id_oficina = 1) , 147 , 'Tião' , 1 , '050.414.214-45' , '1985-04-25', '1512.214.114' , '2022-05-24' , 'ab+');
+         ((select o.id_oficina from oficina o where id_oficina = 1) , 147 , 'TiÃ£o' , 1 , '050.414.214-45' , '1985-04-25', '1512.214.114' , '2022-05-24' , 'ab+');
 
 
 ----------------------------------------------------------------------------------------------------
 
--> Tabela Endereço ( Funcionario )
+-> Tabela EndereÃ§o ( Funcionario )
 
-  1 = Inserir endereço do Funcionario, Devemos informar o ID_FUNCIONARIO
+  1 = Inserir endereÃ§o do Funcionario, Devemos informar o ID_FUNCIONARIO
 
 EXEMPLO: insert into endereco (id_funcionario, rua , bairro , numero_endereco , complemento , cep, ponto_referencia ) Values 
          ((select func.id_funcionario from funcionario func where id_funcionario = 1) , 'Av Agamenom Magalhaes', 'Santo Amaro',  705 , 'Apt 601', '51250-050', 'Perto do clube Portugues'); , '1985-04-25', '1512.214.114' , '2022-05-24' , 'ab+');
@@ -110,7 +110,7 @@ EXEMPLO: insert into dependentes (id_funcionario , nome_dependente, parentesco, 
 
 -> Tabela Lancamento
 
-  1 = Inserir o lançamento , Devemos informar o ID_FUNCIONARIO
+  1 = Inserir o lanÃ§amento , Devemos informar o ID_FUNCIONARIO
 
 EXEMPLO: insert into lancamento (id_funcionario , total_vantagem , total_desconto , total_liquido , valor , parcela_inicial , parcela_final ) VALUES
          ((select func.id_funcionario from funcionario func where id_funcionario = 1) , '2500.00' , '500' , '2000.00', '0', '0','0');
@@ -131,7 +131,7 @@ EXEMPLO: insert into por (id_periodo , id_lancamento )
 -> Tabela Consta ( Relacionmaneto entre LANCAMENTO e EVENTO ):
 
 
-  1 = Inserir o ID_LANCAMENTO ( O mesmo irá referenciar o ID_FUNCIONARIO , Para isso está errado. Deve ser passado
+  1 = Inserir o ID_LANCAMENTO ( O mesmo irÃ¡ referenciar o ID_FUNCIONARIO , Para isso estÃ¡ errado. Deve ser passado
 				o ID_EVENTO )
 
 
@@ -149,14 +149,14 @@ EXEMPLO: insert into consta (id_lancamento , id_evento  ) VALUES (1 ,1);
 
 -> Tabela Endereco ( FORNECEDOR )
 
-  1 = Para indicarmos ao sistema que o endereço 'X', vai para um determinado fornecedor, primeiro temos que cadastrar um endereço normalmente.
+  1 = Para indicarmos ao sistema que o endereÃ§o 'X', vai para um determinado fornecedor, primeiro temos que cadastrar um endereÃ§o normalmente.
 
 
 ----------------------------------------------------------------------------------------------------
 
 -> Tabela TEM_1 ( Relacionamento entre FORNECEDOR e ENDERECO ) 
 
-  1 = Após termos cadastardo um endereço na tabela endereço... devemos referenciar que o ID_FORNECEDOR vai para o ID_ENDERECO
+  1 = ApÃ³s termos cadastardo um endereÃ§o na tabela endereÃ§o... devemos referenciar que o ID_FORNECEDOR vai para o ID_ENDERECO
 
 EXEMPLO: insert into tem_1 (id_fornecedor , id_endereco)
 	 (select forn.id_fornecedor , ende.id_endereco from fornecedor forn
