@@ -1,0 +1,196 @@
+Sequencia para os Inserts.
+
+----------------------------------------------------------------------------------------------------
+
+-> Tabela CLIENTE: 
+
+ 1 = Inserir cliente
+
+----------------------------------------------------------------------------------------------------
+
+-> Tabela ENDEREÇO (CLIENTE)
+
+ 1 = Inserir endereço do cliente , Devemos informar o ID_CLIENTE
+
+EXEMPLO: insert into endereco (id_cliente, rua , bairro, numero_endereco, complemento, cep, ponto_referencia ) VALUES
+	 ((select c.id_cliente from cliente c where id_cliente = 1) , 'Rua sa e souza', 'Boa Viagem',  128 , 'Apt 201', '51030-065', 'Ao lado da farmacia Drogasil'); 
+
+
+----------------------------------------------------------------------------------------------------
+
+-> Tabela CARRO: 
+  
+  1 = Inserir carro 
+
+----------------------------------------------------------------------------------------------------
+
+-> Tabela AGENDAMENTO:
+  
+   1 = Inserir o Agendamento
+
+----------------------------------------------------------------------------------------------------
+
+-> Tabela REALIZA ( Relacionamento entre CARRO e AGENDAMENTO ):
+
+--> Essa tabela fica responsavel da comunicação entre as tabelas agendamento e carro <--
+
+   1 = Inserir na tabela realiza , informando o ID_CARRO e o ID_AGENDAMENTO
+
+EXEMPLO: insert into realiza (id_agendamento ,id_carro )
+	(select ag.id_agendamento , ca.id_carro from agendamento ag 
+	inner join carro ca on ag.id_agendamento = 1 and ca.id_carro = 2);
+
+----------------------------------------------------------------------------------------------------
+
+-> Tabela OFICINA: 
+
+ 1 = Inserir a Oficina
+
+----------------------------------------------------------------------------------------------------
+
+-> Tabela Endereço (Oficina) 
+
+ 1 = Inserir endereço da Oficina , Devemos informar o ID_OFICINA
+
+EXEMPLO: insert into endereco (id_oficina, rua , bairro , numero_endereco , complemento , cep, ponto_referencia ) Values 
+	 ((select ofc.id_oficina from oficina ofc where id_oficina = 1) , 'Av Caxanga', 'Iputinga',  261 , 'Nº 850', '56011-774', 'Por tras do mercado Maria');
+
+
+----------------------------------------------------------------------------------------------------
+
+-> Tabela Cargo
+	
+ 1 = Inserir Cargo
+
+
+----------------------------------------------------------------------------------------------------
+
+-> Tabela Funcionario 
+
+  1 = Inserir Funcionario , Devemos informar o ID_OFICINA e o Codigo do Cargo, no exemplo abaixo vemos que o codigo é 147
+
+EXEMPLO: insert into funcionario (id_oficina, cod_cargo, nome_funcionario, matricula, cpf_funcionario, data_nascimento_func, ctps, data_admissao , tipo_sanguineo) VALUES
+         ((select o.id_oficina from oficina o where id_oficina = 1) , 147 , 'Tião' , 1 , '050.414.214-45' , '1985-04-25', '1512.214.114' , '2022-05-24' , 'ab+');
+
+
+----------------------------------------------------------------------------------------------------
+
+-> Tabela Endereço ( Funcionario )
+
+  1 = Inserir endereço do Funcionario, Devemos informar o ID_FUNCIONARIO
+
+EXEMPLO: insert into endereco (id_funcionario, rua , bairro , numero_endereco , complemento , cep, ponto_referencia ) Values 
+         ((select func.id_funcionario from funcionario func where id_funcionario = 1) , 'Av Agamenom Magalhaes', 'Santo Amaro',  705 , 'Apt 601', '51250-050', 'Perto do clube Portugues'); , '1985-04-25', '1512.214.114' , '2022-05-24' , 'ab+');
+
+
+----------------------------------------------------------------------------------------------------
+
+-> Tabela Dependentes 
+
+  1 = Inserir os dependentes , Devemos informar o ID_FUNCIONARIO
+
+EXEMPLO: insert into dependentes (id_funcionario , nome_dependente, parentesco, idade_dependente, cpf_dependente, naturalidade, situacao_dependente ) VALUES
+         ((select func.id_funcionario from funcionario func where id_funcionario = 1) , 'Maria Joaquina' , 'Filho(a)' , 10 , '447.854.447-84', 'Pernambucana' , 'Ativo' );
+
+
+----------------------------------------------------------------------------------------------------
+
+-> Tabela Eventos
+ 
+  1 = Inserir os Eventos
+
+
+----------------------------------------------------------------------------------------------------
+
+-> Tabela Periodo
+
+  1 = Inserir os Periodos
+
+----------------------------------------------------------------------------------------------------
+
+-> Tabela Lancamento
+
+  1 = Inserir o lançamento , Devemos informar o ID_FUNCIONARIO
+
+EXEMPLO: insert into lancamento (id_funcionario , total_vantagem , total_desconto , total_liquido , valor , parcela_inicial , parcela_final ) VALUES
+         ((select func.id_funcionario from funcionario func where id_funcionario = 1) , '2500.00' , '500' , '2000.00', '0', '0','0');
+
+----------------------------------------------------------------------------------------------------
+
+-> Tabela Por ( Relacionamento entre PERIODO e LANCAMENTO ):
+
+  1 = Inserir informando o ID_PERIODO e o ID_LANCAMENTO
+
+EXEMPLO: insert into por (id_periodo , id_lancamento ) 
+	 (select per.id_periodo , lanc.id_lancamento from periodo per
+         inner join lancamento lanc on per.id_periodo = 1 where lanc.id_lancamento = 1);
+
+
+----------------------------------------------------------------------------------------------------
+
+-> Tabela Consta ( Relacionmaneto entre LANCAMENTO e EVENTO ):
+
+
+  1 = Inserir o ID_LANCAMENTO ( O mesmo irá referenciar o ID_FUNCIONARIO , Para isso está errado. Deve ser passado
+				o ID_EVENTO )
+
+
+EXEMPLO: insert into consta (id_lancamento , id_evento  ) VALUES (1 ,1);
+	 insert into consta (id_lancamento , id_evento  ) VALUES (1 ,4);
+	
+
+----------------------------------------------------------------------------------------------------
+
+-> Tabela Fornecedor
+
+  1 = Inserir o Fornecedor.
+
+----------------------------------------------------------------------------------------------------
+
+-> Tabela Endereco ( FORNECEDOR )
+
+  1 = Para indicarmos ao sistema que o endereço 'X', vai para um determinado fornecedor, primeiro temos que cadastrar um endereço normalmente.
+
+
+----------------------------------------------------------------------------------------------------
+
+-> Tabela TEM_1 ( Relacionamento entre FORNECEDOR e ENDERECO ) 
+
+  1 = Após termos cadastardo um endereço na tabela endereço... devemos referenciar que o ID_FORNECEDOR vai para o ID_ENDERECO
+
+EXEMPLO: insert into tem_1 (id_fornecedor , id_endereco)
+	 (select forn.id_fornecedor , ende.id_endereco from fornecedor forn
+	 inner join endereco ende on forn.id_fornecedor = 1 and ende.id_endereco = 37);
+
+
+----------------------------------------------------------------------------------------------------
+
+-> Tabela Produto 
+
+   1 = Inserir o produto
+
+----------------------------------------------------------------------------------------------------
+
+-> Tabela Envia ( Relacionamento entre PRODUTO e FORNECEDOR )
+
+  1 = Para indicarmos que o fornecedor 'X' enviou o produto 'Y' , devemos referenciar o ID_PRODUTO e o ID_FORNECEDOR
+
+EXEMPLO: insert into envia (id_produto , id_fornecedor )  
+	 (select forn.id_fornecedor , prod.id_produto   from fornecedor forn 
+ 	 inner join produto prod on prod.id_produto = 1 and forn.id_fornecedor = 1);
+
+
+----------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
