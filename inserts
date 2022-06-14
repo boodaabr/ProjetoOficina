@@ -712,25 +712,39 @@ inner join lancamento lanc on func.id_funcionario = lanc.id_funcionario;
 
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
---Abaixo eu consigo colocar evento por evento em cada cliente, mas o ideal era inserir o evento 1 para todos os funcionarios --
+--Abaixo eu consigo colocar evento por evento em cada funcionario , mas o ideal era inserir o evento 1 para todos os funcionarios --
 
-insert into consta (id_lancamento , id_evento ) values
+insert into consta (id_lancamento , id_evento  ) VALUES
 (1 ,1);
+
+insert into consta (id_lancamento , id_evento  ) VALUES
+(1 ,4);
 
 insert into consta (id_lancamento , id_evento ) values
 (2 ,1);
- 
- 
+  
 insert into consta (id_lancamento , id_evento ) values
 (2 ,2);
- 
-SELECT * from lancamento; 
+
+insert into consta (id_lancamento , id_evento ) values
+(2 ,4);
+
+insert into consta (id_lancamento , id_evento ) values
+(3 ,1);
+
+insert into consta (id_lancamento , id_evento ) values
+(3 ,6);
+
+insert into consta (id_lancamento , id_evento ) values
+(4 ,1);
+
+insert into consta (id_lancamento , id_evento ) values
+(4 ,2);
+
+insert into consta (id_lancamento , id_evento ) values
+(4 ,6);
 
 select * from eventos; 
- 
-select * from lancamento; 
-
-select * from consta;
 
 select ev.id_evento, ev.nome_evento, ev.descricao, lanc.id_funcionario, func.nome_funcionario 
 from eventos ev
@@ -944,43 +958,97 @@ inner join fornecedor forn on forn.id_fornecedor = env.id_fornecedor
 inner join produto prod on prod.id_produto = env.id_produto;        
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-insert into vai (id_produto , id_estoque ) 
-(select prod.id_produto , est.id_estoque from produto prod 
- inner join 
-
-
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
  
--- insert into estoque (descricao_produtoestoque, quantidade , estoque_minimo , estoque_maximo , preco_unitario , data_compraproduto ) VALUES
---('Kit Correa Palio 2010 à 2015', 25 , 5 , 50 , '400.00' , '2022-02-05' );
+ insert into estoque (descricao_produtoestoque, quantidade , estoque_minimo , estoque_maximo , preco_unitario , data_compraproduto ) VALUES
+('Kit Amortecedor Fiat Dianteiro e Traseiro ', 25 , 5 , 50 , '400.00' , '2022-02-05' );
 
---insert into estoque (descricao_produtoestoque, quantidade , estoque_minimo , estoque_maximo , preco_unitario , data_compraproduto ) VALUES
---('Filtro Ar Condicionado Onix 2020 à 2022', 15 , 5 , 60 , '120.00' , '2022-02-05' );
+insert into estoque (descricao_produtoestoque, quantidade , estoque_minimo , estoque_maximo , preco_unitario , data_compraproduto ) VALUES
+('Kit Vela e Correa', 15 , 5 , 60 , '120.00' , '2022-02-05' );
 
---insert into estoque (descricao_produtoestoque, quantidade , estoque_minimo , estoque_maximo , preco_unitario , data_compraproduto ) VALUES
---('Filto de Oleo Onix 2020 à 2022', 70 , 5 , 120 , '100.00' , '2022-02-05' );
+insert into estoque (descricao_produtoestoque, quantidade , estoque_minimo , estoque_maximo , preco_unitario , data_compraproduto ) VALUES
+('Kit Revisão Toyota', 70 , 5 , 120 , '500.00' , '2022-02-05' );
 
---insert into estoque (descricao_produtoestoque, quantidade , estoque_minimo , estoque_maximo , preco_unitario , data_compraproduto ) VALUES
---('Filto de Oleo Civic 2020 à 2022', 25 , 10 , 100 , '180.00' , '2022-01-25' );
+insert into estoque (descricao_produtoestoque, quantidade , estoque_minimo , estoque_maximo , preco_unitario , data_compraproduto ) VALUES
+('Kit Revisão Honda', 25 , 10 , 100 , '500.00' , '2022-01-25' );
 
---insert into estoque (descricao_produtoestoque, quantidade , estoque_minimo , estoque_maximo , preco_unitario , data_compraproduto ) VALUES
---('Conjunto Vidro Eletrico GOL 2020 à 2022', 25 , 10 , 100 , '500.00' , '2022-01-26' );
+insert into estoque (descricao_produtoestoque, quantidade , estoque_minimo , estoque_maximo , preco_unitario , data_compraproduto ) VALUES
+('Kit Revisão GM', 25 , 10 , 100 , '500.00' , '2022-01-26' );
 
---insert into estoque (descricao_produtoestoque, quantidade , estoque_minimo , estoque_maximo , preco_unitario , data_compraproduto ) VALUES
---('Kit 4 Amortecedores Corolla 2019 à 2022', 30 , 10 , 50 , '2500.00' , '2022-01-26' );
+insert into estoque (descricao_produtoestoque, quantidade , estoque_minimo , estoque_maximo , preco_unitario , data_compraproduto ) VALUES
+('Kit Revisão Peugeot', 30 , 10 , 50 , '2500.00' , '2022-01-26' );
 
---insert into estoque (descricao_produtoestoque, quantidade , estoque_minimo , estoque_maximo , preco_unitario , data_compraproduto ) VALUES
---('Par Farol Fiat Argo 2019 à 2022', 12 , 10 , 50 , '1600.00' , '2022-01-26' );
+insert into estoque (descricao_produtoestoque, quantidade , estoque_minimo , estoque_maximo , preco_unitario , data_compraproduto ) VALUES
+('Kit Amertecedor Toyota Dianteiro e Traseiro', 12 , 10 , 50 , '1600.00' , '2022-01-26' );
 
---insert into estoque (descricao_produtoestoque, quantidade , estoque_minimo , estoque_maximo , preco_unitario , data_compraproduto ) VALUES
---('Bomba D agua Jeep Renegade ', 2 , 10 , 15 , '1200.00' , '2022-01-26' );
+insert into estoque (descricao_produtoestoque, quantidade , estoque_minimo , estoque_maximo , preco_unitario , data_compraproduto ) VALUES
+('Kit Amortecedor Honda Dianteiro e Traseiro ', 2 , 10 , 15 , '1200.00' , '2022-01-26' );
 
---insert into estoque (descricao_produtoestoque, quantidade , estoque_minimo , estoque_maximo , preco_unitario , data_compraproduto ) VALUES
---('Kit Sistema Arrefecimento Peugeot 2018 à 2022', 10 , 10 , 25 , '1500.00' , '2022-01-26' );
+insert into estoque (descricao_produtoestoque, quantidade , estoque_minimo , estoque_maximo , preco_unitario , data_compraproduto ) VALUES
+('Kit Amortecedor GM Dianteiro e Traseiro', 10 , 10 , 25 , '1500.00' , '2022-01-26' );
 
---insert into estoque (descricao_produtoestoque, quantidade , estoque_minimo , estoque_maximo , preco_unitario , data_compraproduto ) VALUES
---('Kit Embreagem Fiat Uno 2015 à 2022', 20 , 10 , 50 , '1900.00' , '2022-01-26' );
+insert into estoque (descricao_produtoestoque, quantidade , estoque_minimo , estoque_maximo , preco_unitario , data_compraproduto ) VALUES
+('Kit Amortecedor Peugeot Dianteiro e Traseiro', 20 , 10 , 50 , '1900.00' , '2022-01-26' );
+
 
 select * from estoque;
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+
+insert into vai (id_produto , id_estoque ) 
+(select prod.id_produto , est.id_estoque from produto prod 
+ inner join estoque est on prod.id_produto = 1 and est.id_estoque = 1);
+
+
+insert into vai (id_produto , id_estoque ) 
+(select prod.id_produto , est.id_estoque from produto prod 
+ inner join estoque est on prod.id_produto = 2 and est.id_estoque = 2);
+ 
+ 
+insert into vai (id_produto , id_estoque ) 
+(select prod.id_produto , est.id_estoque from produto prod 
+ inner join estoque est on prod.id_produto = 3 and est.id_estoque = 3);
+
+
+insert into vai (id_produto , id_estoque ) 
+(select prod.id_produto , est.id_estoque from produto prod 
+ inner join estoque est on prod.id_produto = 4 and est.id_estoque = 4);
+ 
+  
+insert into vai (id_produto , id_estoque ) 
+(select prod.id_produto , est.id_estoque from produto prod 
+ inner join estoque est on prod.id_produto = 5 and est.id_estoque = 5);
+ 
+ 
+insert into vai (id_produto , id_estoque ) 
+(select prod.id_produto , est.id_estoque from produto prod 
+ inner join estoque est on prod.id_produto = 6 and est.id_estoque = 6);
+ 
+ 
+insert into vai (id_produto , id_estoque ) 
+(select prod.id_produto , est.id_estoque from produto prod 
+ inner join estoque est on prod.id_produto = 7 and est.id_estoque = 7);
+ 
+ 
+insert into vai (id_produto , id_estoque ) 
+(select prod.id_produto , est.id_estoque from produto prod 
+ inner join estoque est on prod.id_produto = 8 and est.id_estoque = 8);
+ 
+ 
+insert into vai (id_produto , id_estoque ) 
+(select prod.id_produto , est.id_estoque from produto prod 
+ inner join estoque est on prod.id_produto = 9 and est.id_estoque = 9);
+ 
+ 
+insert into vai (id_produto , id_estoque ) 
+(select prod.id_produto , est.id_estoque from produto prod 
+ inner join estoque est on prod.id_produto = 10 and est.id_estoque = 10);
+ 
+
+select prod.id_produto , prod.codigo_barras , prod.descricao_produto , prod.fabricante , est.id_estoque , est.descricao_produtoestoque, est.quantidade, est.data_compraproduto
+from vai va
+inner join estoque est on va.id_estoque = est.id_estoque
+inner join produto prod on va.id_produto = prod.id_produto;
+ 
+ 
+ ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ 
