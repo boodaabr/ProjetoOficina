@@ -10,7 +10,7 @@ Sequencia para os Inserts.
 
 -> Tabela ENDEREÇO (CLIENTE)
 
- 1 = Para inserirmos o endereço do cliente , Devemos informar o ID_CLIENTE
+ 1 = Inserir endereço do cliente , Devemos informar o ID_CLIENTE
 
 EXEMPLO: insert into endereco (id_cliente, rua , bairro, numero_endereco, complemento, cep, ponto_referencia ) VALUES
 	 ((select c.id_cliente from cliente c where id_cliente = 1) , 'Rua sa e souza', 'Boa Viagem',  128 , 'Apt 201', '51030-065', 'Ao lado da farmacia Drogasil'); 
@@ -183,13 +183,34 @@ EXEMPLO: insert into envia (id_produto , id_fornecedor )
 ----------------------------------------------------------------------------------------------------
 
 
+-> Tabela Estoque ( Precisamos Cadastrar manualmente dentro da tabela estoque , todos os itens que tem na tabela produto )
+
+  1=> Devemos inserir de acordo com a tabela Produto :
+
+Exemplo: Tabela Produto: 
+			insert into produto (codigo_barras , descricao_produto, fabricante, quantidade, preco_custo, preco_venda, montadora, garantia, data_cadastro_produto, categoria) VALUES
+			('41806774666' , 'Kit Amortecedor Fiat Dianteiro e Traseiro' , '3M' , 20 , '1200.00' , '1800.00' , 'Fiat' , '90 Dias' , '05-02-2022', 'Kit Amortecedor Fiat');
 
 
+	Tabela Estoque:  
+			insert into estoque (descricao_produtoestoque, quantidade , estoque_minimo , estoque_maximo , preco_unitario , data_compraproduto ) VALUES
+			('Kit Amortecedor Fiat Dianteiro e Traseiro ', 25 , 5 , 50 , '400.00' , '2022-02-05' );
+		      		
+
+		    
+----------------------------------------------------------------------------------------------------
 
 
+-> Tabela Vai ( Relacionamento entre PRODUTO e ESTOQUE )
+
+   1=> Devemos inserir informando o ID_PRODUTO com o ID_ESTOQUE
+
+Exemplo: insert into vai (id_produto , id_estoque ) 
+	 (select prod.id_produto , est.id_estoque from produto prod 
+ 	 inner join estoque est on prod.id_produto = 1 and est.id_estoque = 1);
 
 
-
+----------------------------------------------------------------------------------------------------
 
 
 
