@@ -81,7 +81,7 @@ quantidade integer,
 codigo_barras varchar(50),
 preco_venda numeric(9,2),
 montadora varchar(60),
-garantia integer,
+garantia varchar(30),
 descricao_produto text,
 data_cadastro_produto date,
 categoria varchar(60)
