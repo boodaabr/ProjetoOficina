@@ -1050,5 +1050,50 @@ inner join estoque est on va.id_estoque = est.id_estoque
 inner join produto prod on va.id_produto = prod.id_produto;
  
  
- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
  
+insert into ordemservico ( id_cliente , id_funcionario , data_abertura_os, data_fechamento_os , status , descricao_os , laudo, observacao_os ) values 
+(1 ,1 , '22/06/2022', '', 'Aberta', 'Revisao, verificar nivel do oleo e o filtro' , 'Sendo analisado' , 'Nada a Declarar');
+
+insert into ordemservico ( id_cliente , id_funcionario , data_abertura_os, data_fechamento_os , status , descricao_os , laudo, observacao_os ) values 
+(2 ,1 , '22/06/2022', '', 'Aberta', 'Problema de aquecimento' , 'Sendo analisado' , 'Nada a Declarar');
+
+insert into ordemservico ( id_cliente , id_funcionario , data_abertura_os, data_fechamento_os , status , descricao_os , laudo, observacao_os ) values 
+(3 ,1 , '22/06/2022', '', 'Aberta', 'Problema ao Ligar' , 'Sendo analisado' , 'Nada a Declarar');
+ 
+ insert into ordemservico ( id_cliente , id_funcionario , data_abertura_os, data_fechamento_os , status , descricao_os , laudo, observacao_os ) values 
+(4 ,2 , '22/06/2022', '', 'Aberta', 'Baruho na Suspensão Dianteira Esquerda' , 'Sendo analisado' , 'Nada a Declarar');
+ 
+insert into ordemservico ( id_cliente , id_funcionario , data_abertura_os, data_fechamento_os , status , descricao_os , laudo, observacao_os ) values 
+(5 ,2 , '22/06/2022', '', 'Aberta', 'Ar Condicionado não está gelando' , 'Sendo analisado' , 'Nada a Declarar');
+
+insert into ordemservico ( id_cliente , id_funcionario , data_abertura_os, data_fechamento_os , status , descricao_os , laudo, observacao_os ) values 
+(6 ,2 , '22/06/2022', '', 'Aberta', 'Direção está muito dura' , 'Verificando o sistema hidraulico' , 'Nada a Declarar');
+
+insert into ordemservico ( id_cliente , id_funcionario , data_abertura_os, data_fechamento_os , status , descricao_os , laudo, observacao_os ) values 
+(7 ,2 , '22/06/2022', '', 'Aberta', 'Revisao do carro' , 'Sendo Analisado' , 'Nada a Declarar');
+
+insert into ordemservico ( id_cliente , id_funcionario , data_abertura_os, data_fechamento_os , status , descricao_os , laudo, observacao_os ) values 
+(8 ,2 , '22/06/2022', '', 'Aberta', 'Carro com problema arquecimento , peugeot' , 'Sendo Analisado' , 'Nada a Declarar');
+
+insert into ordemservico ( id_cliente , id_funcionario , data_abertura_os, data_fechamento_os , status , descricao_os , laudo, observacao_os ) values 
+(9 ,1 , '22/06/2022', '', 'Aberta', 'Realizar rodizio dos pneus' , 'Sendo Analisado' , 'Nada a Declarar');
+
+insert into ordemservico ( id_cliente , id_funcionario , data_abertura_os, data_fechamento_os , status , descricao_os , laudo, observacao_os ) values 
+(14 ,1 , '22/06/2022', '', 'Aberta', 'Realizar a revisao do veiculo Honda' , 'Sendo Analisado' , 'Nada a Declarar');
+
+insert into ordemservico ( id_cliente , id_funcionario , data_abertura_os, data_fechamento_os , status , descricao_os , laudo, observacao_os ) values 
+(15 ,1 , '22/06/2022', '', 'Aberta', 'Realizar a revisao do veiculo Toyota' , 'Sendo Analisado' , 'Nada a Declarar');
+
+
+select * from ordemservico;
+
+select cli.id_cliente ,rea.id_carro, rea.id_agendamento,  car.marca , ag.tipo_agendamento , ag.observacao_agendamento
+from agendamento ag
+inner join carro car on car.id_carro = ag.id_agendamento
+inner join cliente cli on cli.id_cliente = car.id_cliente
+inner join realiza rea on car.id_carro = rea.id_carro
+order by id_cliente;
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+
